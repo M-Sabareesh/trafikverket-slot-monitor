@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "trafikverket-slot-monitor"
+version = "0.1.0"
+description = "A Python application that monitors available Trafikverket driving test slots in Sweden and sends notifications for cancellations or openings."
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.26.0"
+schedule = "^1.1.0"
+python-dotenv = "^0.19.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

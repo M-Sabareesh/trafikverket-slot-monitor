@@ -1,0 +1,17 @@
+[Unit]
+Description=Trafikverket Slot Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=smadamba
+WorkingDirectory=/home/smadamba/personal/trafik/trafikverket-slot-monitor
+Environment="PATH=/home/smadamba/personal/trafik/trafikverket-slot-monitor/.venv/bin:/usr/bin:/bin"
+ExecStart=/home/smadamba/personal/trafik/trafikverket-slot-monitor/.venv/bin/python /home/smadamba/personal/trafik/trafikverket-slot-monitor/src/main.py --loop --always-notify
+Restart=always
+RestartSec=30
+StandardOutput=append:/home/smadamba/personal/trafik/trafikverket-slot-monitor/logs/monitor.log
+StandardError=append:/home/smadamba/personal/trafik/trafikverket-slot-monitor/logs/monitor.log
+
+[Install]
+WantedBy=multi-user.target

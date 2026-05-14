@@ -1,0 +1,87 @@
+name: Monitor Trafikverket Slots
+
+on:
+  schedule:
+    # Run every 2 hours during daytime (Stockholm time = UTC+2)
+    # 6 AM, 8 AM, 10 AM, 12 PM, 2 PM, 4 PM, 6 PM, 8 PM Stockholm
+    - cron: '0 4,6,8,10,12,14,16,18 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Run on push to main for testing
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'requirements.txt'
+
+jobs:
+  check-slots:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: � Restore session from secret
+        if: ${{ secrets.SESSION_DATA != '' }}
+        run: |
+          mkdir -p data
+          echo "${{ secrets.SESSION_DATA }}" | base64 -d > data/session.json
+          echo "✅ Session restored from GitHub Secret"
+      
+      - name: �📂 Restore previous slots
+        uses: actions/cache@v4
+        with:
+          path: data/previous_slots.json
+          key: slots-${{ github.run_id }}
+          restore-keys: |
+            slots-
+      
+      - name: 🔍 Run slot monitor
+        env:
+          BOOKING_URL: ${{ secrets.BOOKING_URL }}
+          LOCATIONS: ${{ secrets.LOCATIONS }}
+          CHECK_BEFORE_DATE: ${{ secrets.CHECK_BEFORE_DATE }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          cd src
+          python main.py --debug || true
+      
+      - name: 📸 Upload debug artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-screenshots
+          path: |
+            data/*.png
+            data/*.json
+            data/*.html
+          retention-days: 7
+      
+      - name: 💾 Save slots cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: data/previous_slots.json
+          key: slots-${{ github.run_id }}
