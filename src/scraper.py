@@ -106,17 +106,23 @@ class TrafikverketScraper:
                 # Reset session expired flag on successful login
                 self.session_expired = False
                 
-                # Save session after successful login
-                logger.info("💾 Saving session...")
-                await self._save_session(context)
-                
                 logger.info("✅ Logged in successfully!")
                 
                 # Take screenshot of logged-in state
                 await page.screenshot(path=str(self.data_dir / "logged_in.png"))
                 
-                # Small delay to let page settle
+                # Wait a bit longer to ensure all cookies are set
+                logger.info("⏳ Waiting for all cookies to be set...")
+                await asyncio.sleep(5)
+                
+                # Navigate around to ensure we get all cookies
+                logger.info("🔄 Navigating to capture all session cookies...")
+                await page.goto(self.BASE_URL + "#/search", wait_until='networkidle', timeout=30000)
                 await asyncio.sleep(2)
+                
+                # Save session after navigation
+                logger.info("💾 Saving session...")
+                await self._save_session(context)
                 
                 # Close any popups/overlays that appeared after login
                 await self._close_overlays(page)
@@ -170,6 +176,24 @@ class TrafikverketScraper:
         """Save browser session (cookies, storage) for reuse."""
         try:
             self.session_file.parent.mkdir(exist_ok=True)
+            
+            # Get all cookies and log them
+            cookies = await context.cookies()
+            logger.info(f"💾 Saving session with {len(cookies)} cookies:")
+            
+            from datetime import datetime
+            now = datetime.now().timestamp()
+            
+            for c in cookies:
+                name = c.get('name', 'unknown')
+                exp = c.get('expires', 0)
+                if exp > 0:
+                    dt = datetime.fromtimestamp(exp)
+                    status = '✅' if exp > now else '❌'
+                    logger.info(f"   {status} {name}: expires {dt}")
+                else:
+                    logger.info(f"   ⚠️  {name}: session cookie")
+            
             await context.storage_state(path=str(self.session_file))
             logger.info(f"💾 Session saved to {self.session_file}")
         except Exception as e:
@@ -282,6 +306,9 @@ class TrafikverketScraper:
                             if await elem.count() > 0:
                                 logger.info(f"✅ BankID authentication successful!")
                                 logger.info(f"   Detected element: {selector}")
+                                # Wait a bit for all cookies to be set
+                                logger.info("⏳ Waiting for cookies to be fully set...")
+                                await asyncio.sleep(3)
                                 return True
                         except:
                             continue
