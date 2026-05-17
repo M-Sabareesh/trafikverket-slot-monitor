@@ -64,7 +64,13 @@ echo "$SESSION_DATA" | gh secret set SESSION_DATA --repo "$REPO"
 echo ""
 echo "✅ SESSION_DATA secret updated successfully!"
 echo ""
-echo "The GitHub Actions workflow will now use the new session."
+
+# Step 4: Trigger workflow
+echo "Step 4: Triggering GitHub Actions workflow..."
+gh workflow run monitor.yml --repo "$REPO"
+
 echo ""
-echo "To verify, trigger a manual run:"
-echo "  gh workflow run monitor.yml --repo $REPO"
+echo "🎉 All done!"
+echo ""
+echo "The monitor is now running with the new session."
+echo "Check status: https://github.com/$REPO/actions"

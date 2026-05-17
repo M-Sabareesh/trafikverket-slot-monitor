@@ -29,43 +29,46 @@ class Notifier:
         
         subject = "⚠️ Trafikverket Monitor: Session Expired - Login Required"
         
-        plain_message = f"""
+        plain_message = """
 ⚠️ SESSION EXPIRED
 
 Your Trafikverket monitoring session has expired.
 The monitor cannot check for available slots until you log in again.
 
-🔐 Please log in to resume monitoring:
-{login_url}
+� TO FIX THIS (run this ONE command in your terminal):
 
-After logging in:
-1. Run: ./update_github_session.sh
-2. Or manually update the SESSION_DATA secret on GitHub
+    cd ~/personal/trafik/trafikverket-slot-monitor && ./update_github_session.sh
+
+This will:
+1. Open browser for BankID login
+2. Save the new session
+3. Update GitHub automatically
+4. Restart the monitoring
 
 ---
 Trafikverket Slot Monitor
 """
         
-        html_message = f"""
+        html_message = """
 <!DOCTYPE html>
 <html>
 <head>
     <style>
-        body {{ font-family: Arial, sans-serif; }}
-        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
-        .alert {{ background: #fef2f2; border: 1px solid #ef4444; border-radius: 8px; padding: 20px; }}
-        h1 {{ color: #dc2626; }}
-        .cta {{ 
-            display: inline-block; 
-            background: #2563eb; 
-            color: white; 
-            padding: 15px 30px; 
-            text-decoration: none; 
-            border-radius: 5px;
-            margin-top: 20px;
-        }}
-        .steps {{ background: #f3f4f6; padding: 15px; border-radius: 5px; margin-top: 20px; }}
-        code {{ background: #e5e7eb; padding: 2px 6px; border-radius: 3px; }}
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .alert { background: #fef2f2; border: 1px solid #ef4444; border-radius: 8px; padding: 20px; }
+        h1 { color: #dc2626; }
+        .command-box { 
+            background: #1f2937; 
+            color: #10b981; 
+            padding: 15px 20px; 
+            border-radius: 8px; 
+            font-family: monospace;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .steps { background: #f3f4f6; padding: 15px; border-radius: 5px; margin-top: 20px; }
+        code { background: #e5e7eb; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
     </style>
 </head>
 <body>
@@ -76,16 +79,20 @@ Trafikverket Slot Monitor
             <p>The monitor <strong>cannot check for available slots</strong> until you log in again.</p>
         </div>
         
-        <a href="{login_url}" class="cta">
-            🔐 Log In Now →
-        </a>
+        <h2>🔧 To Fix This</h2>
+        <p>Run this <strong>ONE command</strong> in your WSL terminal:</p>
+        
+        <div class="command-box">
+            cd ~/personal/trafik/trafikverket-slot-monitor && ./update_github_session.sh
+        </div>
         
         <div class="steps">
-            <h3>After logging in:</h3>
+            <h3>This will automatically:</h3>
             <ol>
-                <li>Open terminal in the project folder</li>
-                <li>Run: <code>./update_github_session.sh</code></li>
-                <li>Or manually update the <code>SESSION_DATA</code> secret on GitHub</li>
+                <li>✅ Open browser for BankID login</li>
+                <li>✅ Save the new session locally</li>
+                <li>✅ Update GitHub secret</li>
+                <li>✅ Restart the monitoring workflow</li>
             </ol>
         </div>
         
