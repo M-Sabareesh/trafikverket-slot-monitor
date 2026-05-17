@@ -1,0 +1,82 @@
+name: Login with BankID and Update Session
+
+on:
+  workflow_dispatch:
+    inputs:
+      wait_time:
+        description: 'Seconds to wait for BankID login (default 120)'
+        required: false
+        default: '120'
+        type: string
+
+jobs:
+  login-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: Run interactive login
+        env:
+          BANKID_WAIT_TIME: ${{ github.event.inputs.wait_time }}
+          LOCATION: ${{ secrets.LOCATION }}
+        run: |
+          echo "=============================================="
+          echo "🔐 BANKID LOGIN REQUIRED"
+          echo "=============================================="
+          echo ""
+          echo "1. Open BankID app on your phone"
+          echo "2. The login page will open automatically"
+          echo "3. Scan the QR code or enter your personal number"
+          echo "4. Complete the BankID authentication"
+          echo ""
+          echo "⏱️  Waiting up to ${BANKID_WAIT_TIME} seconds for login..."
+          echo ""
+          
+          cd src
+          python main.py --login --save-session --wait-time=${BANKID_WAIT_TIME} 2>&1 || true
+          
+          # Check if session was saved
+          if [ -f "../data/session.json" ]; then
+            echo "✅ Session file created!"
+            SESSION_SIZE=$(wc -c < ../data/session.json)
+            echo "   Size: ${SESSION_SIZE} bytes"
+          else
+            echo "❌ Session file not created - login may have failed"
+            exit 1
+          fi
+      
+      - name: Update SESSION_DATA secret
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "$GH_TOKEN" ]; then
+            SESSION_B64=$(cat data/session.json | base64 -w 0)
+            echo "$SESSION_B64" | gh secret set SESSION_DATA --repo ${{ github.repository }}
+            echo "✅ SESSION_DATA secret updated!"
+          else
+            echo "❌ GH_PAT secret not set - cannot update secret"
+            echo "   Please add a Personal Access Token as GH_PAT secret"
+            exit 1
+          fi
+      
+      - name: Trigger monitor workflow
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "$GH_TOKEN" ]; then
+            gh workflow run monitor.yml --repo ${{ github.repository }}
+            echo "✅ Monitor workflow triggered!"
+          fi

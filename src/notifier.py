@@ -29,7 +29,7 @@ class Notifier:
         
         # Get GitHub repo from environment for dynamic URLs
         github_repo = os.environ.get("GITHUB_REPOSITORY", "M-Sabareesh/trafikverket-slot-monitor")
-        github_actions_url = f"https://github.com/{github_repo}/actions/workflows/update-and-run.yml"
+        github_actions_url = f"https://github.com/{github_repo}/actions"
         
         subject = "⚠️ Trafikverket Monitor: Session Expired - Login Required"
         
@@ -40,38 +40,26 @@ Your Trafikverket monitoring session has expired.
 The monitor cannot check for available slots until you log in again.
 
 ═══════════════════════════════════════════════════════════════
-OPTION 1: Python Script (EASIEST - Works on any computer)
+HOW TO FIX (requires a computer with Python)
 ═══════════════════════════════════════════════════════════════
 
-Run this command:
+Step 1: Login with BankID
+    cd trafikverket-slot-monitor/src
+    python main.py --login
 
-    python update_session.py
+Step 2: Push session to GitHub
+    cd ..
+    python quick_update.py
 
-This will:
-- Open a browser window
-- Wait for you to login with BankID
-- Automatically extract and save the session
-- Update GitHub and restart monitoring
-
-═══════════════════════════════════════════════════════════════
-OPTION 2: Shell Script (WSL/Linux/Mac)
-═══════════════════════════════════════════════════════════════
-
-    ./update_github_session.sh
+That's it! The monitoring will resume automatically.
 
 ═══════════════════════════════════════════════════════════════
-OPTION 3: From Mobile / Any Device
+WHY CAN'T I DO THIS FROM MY PHONE?
 ═══════════════════════════════════════════════════════════════
 
-1. Login to Trafikverket: {login_url}
-2. Open browser DevTools (F12) → Console
-3. Paste this code:
-
-   btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]=c.trim().split('=');return {{name:n,value:v,domain:'fp.trafikverket.se',path:'/'}}}})}}))
-
-4. Copy the output (starts with "eyJ...")
-5. Go to: {github_actions_url}
-6. Click "Run workflow", paste the data, and run
+The session cookies are "httpOnly" which means JavaScript cannot 
+access them. You need to use Playwright (Python) to capture them
+during the BankID login process.
 
 ---
 Trafikverket Slot Monitor
@@ -82,45 +70,40 @@ Trafikverket Slot Monitor
 <html>
 <head>
     <style>
-        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }}
-        .container {{ max-width: 650px; margin: 0 auto; padding: 20px; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1f2937; }}
+        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
         .alert {{ background: linear-gradient(135deg, #fef2f2, #fff1f2); border: 2px solid #ef4444; border-radius: 12px; padding: 24px; margin-bottom: 24px; }}
-        h1 {{ color: #dc2626; margin: 0 0 10px 0; }}
-        .option {{ background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
-        .option-header {{ display: flex; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }}
-        .option-number {{ background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 10px; }}
-        .option-title {{ font-weight: 600; color: #1f2937; font-size: 16px; }}
-        .badge {{ display: inline-block; background: #10b981; color: white; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; text-transform: uppercase; }}
+        h1 {{ color: #dc2626; margin: 0 0 10px 0; font-size: 24px; }}
+        h2 {{ color: #1f2937; margin: 24px 0 16px 0; font-size: 20px; }}
+        .steps {{ background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; margin: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
+        .step {{ display: flex; margin: 16px 0; align-items: flex-start; }}
+        .step-number {{ background: #3b82f6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; margin-right: 16px; flex-shrink: 0; }}
+        .step-content {{ flex: 1; }}
+        .step-title {{ font-weight: 600; color: #1f2937; margin-bottom: 4px; }}
         .command-box {{ 
             background: #1e293b; 
             color: #4ade80; 
-            padding: 14px 18px; 
+            padding: 12px 16px; 
             border-radius: 8px; 
             font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
-            font-size: 13px;
-            margin: 12px 0;
+            font-size: 14px;
+            margin: 8px 0;
             overflow-x: auto;
         }}
-        .steps {{ background: #f8fafc; padding: 16px; border-radius: 8px; margin-top: 12px; }}
-        .steps ol {{ margin: 0; padding-left: 20px; }}
-        .steps li {{ margin: 8px 0; }}
-        code {{ background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; }}
-        a {{ color: #2563eb; }}
-        a:hover {{ color: #1d4ed8; }}
+        .info-box {{ background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-top: 20px; }}
+        .info-box h3 {{ color: #1e40af; margin: 0 0 8px 0; font-size: 14px; }}
+        .info-box p {{ margin: 0; color: #1e40af; font-size: 13px; }}
         .btn {{ 
             display: inline-block; 
             background: #2563eb; 
             color: white !important; 
-            padding: 10px 20px; 
-            border-radius: 6px; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
             text-decoration: none; 
             font-weight: 500;
-            margin-top: 8px;
+            margin-top: 16px;
         }}
-        .btn:hover {{ background: #1d4ed8; }}
-        .btn-green {{ background: #16a34a; }}
-        .divider {{ border-top: 1px solid #e5e7eb; margin: 20px 0; }}
-        .footer {{ color: #6b7280; font-size: 12px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #e5e7eb; }}
+        .footer {{ color: #6b7280; font-size: 12px; margin-top: 32px; padding-top: 16px; border-top: 1px solid #e5e7eb; }}
     </style>
 </head>
 <body>
@@ -130,64 +113,42 @@ Trafikverket Slot Monitor
             <p style="margin: 0; color: #7f1d1d;">Your Trafikverket monitoring session has expired. The monitor <strong>cannot check for available slots</strong> until you log in again.</p>
         </div>
         
-        <h2 style="color: #1f2937; margin-bottom: 16px;">🔧 Choose How to Update</h2>
+        <h2>🔧 How to Fix</h2>
+        <p style="color: #6b7280; margin-bottom: 16px;">Run these two commands on a computer with Python:</p>
         
-        <!-- Option 1: Python Script -->
-        <div class="option">
-            <div class="option-header">
-                <span class="option-number">1</span>
-                <span class="option-title">Python Script</span>
-                <span class="badge">Easiest</span>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Login with BankID</div>
+                    <p style="color: #6b7280; margin: 4px 0;">Open terminal and run:</p>
+                    <div class="command-box">cd trafikverket-slot-monitor/src<br>python main.py --login</div>
+                    <p style="color: #6b7280; font-size: 13px; margin: 8px 0 0 0;">A browser will open. Complete the BankID login.</p>
+                </div>
             </div>
-            <p style="margin: 0 0 12px 0; color: #4b5563;">Run this on any computer with Python installed:</p>
-            <div class="command-box">python update_session.py</div>
-            <div class="steps">
-                <strong>This will automatically:</strong>
-                <ol>
-                    <li>Open a browser window</li>
-                    <li>Wait for you to login with BankID</li>
-                    <li>Extract and save the session</li>
-                    <li>Update GitHub and restart monitoring</li>
-                </ol>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Push session to GitHub</div>
+                    <p style="color: #6b7280; margin: 4px 0;">After login completes:</p>
+                    <div class="command-box">cd ..<br>python quick_update.py</div>
+                    <p style="color: #6b7280; font-size: 13px; margin: 8px 0 0 0;">This updates GitHub and restarts monitoring automatically.</p>
+                </div>
             </div>
         </div>
         
-        <!-- Option 2: Shell Script -->
-        <div class="option">
-            <div class="option-header">
-                <span class="option-number">2</span>
-                <span class="option-title">Shell Script</span>
-            </div>
-            <p style="margin: 0 0 12px 0; color: #4b5563;">For WSL/Linux/Mac terminals:</p>
-            <div class="command-box">./update_github_session.sh</div>
-        </div>
+        <a href="{github_actions_url}" class="btn" target="_blank">
+            📊 Check Workflow Status
+        </a>
         
-        <!-- Option 3: Mobile/Web -->
-        <div class="option">
-            <div class="option-header">
-                <span class="option-number">3</span>
-                <span class="option-title">Mobile / Any Device</span>
-                <span class="badge" style="background: #8b5cf6;">Remote</span>
-            </div>
-            <p style="margin: 0 0 12px 0; color: #4b5563;">Update from your phone or any browser:</p>
-            <div class="steps">
-                <ol>
-                    <li><strong>Login</strong> to Trafikverket: <a href="{login_url}" target="_blank">{login_url}</a></li>
-                    <li><strong>Extract cookies:</strong> Open DevTools (F12) → Console → paste the code below</li>
-                    <li><strong>Copy</strong> the output (starts with <code>eyJ...</code>)</li>
-                    <li><strong>Go to GitHub Actions</strong> and paste the session data</li>
-                </ol>
-            </div>
-            <p style="margin: 10px 0 5px 0; color: #4b5563;"><strong>Code to paste in console:</strong></p>
-            <div class="command-box" style="font-size: 11px; word-break: break-all;">btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]=c.trim().split('=');return {{name:n,value:v,domain:'fp.trafikverket.se',path:'/'}}}})}}))
-            </div>
-            <a href="{github_actions_url}" class="btn btn-green" target="_blank">
-                🚀 Open GitHub Actions
-            </a>
+        <div class="info-box">
+            <h3>💡 Why can't I do this from my phone?</h3>
+            <p>The session cookies are "httpOnly" which means JavaScript cannot access them. You need to use Playwright (Python) to capture them during the BankID login process.</p>
         </div>
         
         <div class="footer">
-            <p>Trafikverket Slot Monitor | <a href="https://github.com/{github_repo}">View on GitHub</a></p>
+            <p>Trafikverket Slot Monitor | <a href="https://github.com/{github_repo}" style="color: #2563eb;">View on GitHub</a></p>
         </div>
     </div>
 </body>

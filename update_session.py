@@ -9,43 +9,111 @@ This script:
 4. Updates the GitHub secret
 5. Triggers the monitoring workflow
 
-Requirements:
-    pip install playwright requests
-    playwright install chromium
-
 Usage:
     python update_session.py
 
-Environment variables (optional - will prompt if not set):
+Environment variables (set in .env or shell):
     GITHUB_TOKEN - GitHub Personal Access Token with 'repo' scope
     GITHUB_REPO - Repository in format 'owner/repo'
+    
+If not set, you will be prompted to enter them.
 """
 
 import os
 import sys
+import subprocess
 import json
 import base64
 import time
 import getpass
 from pathlib import Path
 
-try:
-    from playwright.sync_api import sync_playwright
-except ImportError:
-    print("❌ Playwright not installed. Run: pip install playwright && playwright install chromium")
-    sys.exit(1)
 
-try:
-    import requests
-except ImportError:
-    print("❌ Requests not installed. Run: pip install requests")
-    sys.exit(1)
+def load_env_file():
+    """Load environment variables from .env file if it exists."""
+    env_file = Path(__file__).parent / ".env"
+    if env_file.exists():
+        print(f"📁 Loading config from .env file...")
+        with open(env_file) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, _, value = line.partition('=')
+                    key = key.strip()
+                    value = value.strip().strip('"').strip("'")
+                    if key and value and key not in os.environ:
+                        os.environ[key] = value
 
-try:
-    from nacl import public, encoding
-except ImportError:
-    print("❌ PyNaCl not installed. Run: pip install pynacl")
-    sys.exit(1)
+
+# Load .env file first
+load_env_file()
+
+
+def install_package(package_name: str, pip_name: str = None) -> bool:
+    """Install a package using pip."""
+    pip_name = pip_name or package_name
+    print(f"📦 Installing {pip_name}...")
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name, "-q"])
+        print(f"   ✅ {pip_name} installed successfully")
+        return True
+    except subprocess.CalledProcessError:
+        print(f"   ❌ Failed to install {pip_name}")
+        return False
+
+
+def check_and_install_dependencies():
+    """Check for required packages and install if missing."""
+    missing = []
+    
+    # Check playwright
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        missing.append(("playwright", "playwright"))
+    
+    # Check requests
+    try:
+        import requests
+    except ImportError:
+        missing.append(("requests", "requests"))
+    
+    # Check pynacl
+    try:
+        from nacl import public
+    except ImportError:
+        missing.append(("nacl", "pynacl"))
+    
+    if missing:
+        print("\n🔧 Some required packages are missing. Installing them now...\n")
+        for module_name, pip_name in missing:
+            if not install_package(module_name, pip_name):
+                print(f"\n❌ Could not install {pip_name}. Please run manually:")
+                print(f"   pip install {pip_name}")
+                sys.exit(1)
+        
+        # Special case: playwright needs browser installation
+        if any(m[0] == "playwright" for m in missing):
+            print("\n📦 Installing Playwright browser (Chromium)...")
+            try:
+                subprocess.check_call([sys.executable, "-m", "playwright", "install", "chromium"])
+                print("   ✅ Chromium browser installed")
+            except subprocess.CalledProcessError:
+                print("   ❌ Failed to install browser. Please run:")
+                print("      python -m playwright install chromium")
+                sys.exit(1)
+        
+        print("\n✅ All dependencies installed! Continuing...\n")
+        print("-" * 50)
+
+
+# Check and install dependencies before importing
+check_and_install_dependencies()
+
+# Now import the required packages
+from playwright.sync_api import sync_playwright
+import requests
+from nacl import public, encoding
 
 
 def get_env_or_prompt(var_name: str, prompt: str, is_secret: bool = False) -> str:
