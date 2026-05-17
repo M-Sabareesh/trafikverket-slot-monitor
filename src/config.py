@@ -60,7 +60,7 @@ class Config:
         self.vehicle_type = os.getenv("VEHICLE_TYPE", "Automatbil")
         
         locations_str = os.getenv("LOCATIONS", self.location)
-        self.locations = [loc.strip() for loc in locations_str.split(",")]
+        self.locations = [loc.strip() for loc in locations_str.split(",") if loc.strip()]
         
         self.check_before_date = os.getenv("CHECK_BEFORE_DATE", "")
         self.notify_before_date = os.getenv("NOTIFY_BEFORE_DATE", "")
@@ -68,8 +68,9 @@ class Config:
         self.headless = os.getenv("HEADLESS", "true").lower() == "true"
         
         self.notification_email = os.getenv("NOTIFICATION_EMAIL", "")
-        self.smtp_server = os.getenv("SMTP_SERVER", "smtp.gmail.com")
-        self.smtp_port = int(os.getenv("SMTP_PORT", "587"))
+        self.smtp_server = os.getenv("SMTP_SERVER", "") or "smtp.gmail.com"
+        smtp_port_str = os.getenv("SMTP_PORT", "") or "587"
+        self.smtp_port = int(smtp_port_str) if smtp_port_str else 587
         self.smtp_username = os.getenv("SMTP_USERNAME", "")
         self.smtp_password = os.getenv("SMTP_PASSWORD", "")
         
