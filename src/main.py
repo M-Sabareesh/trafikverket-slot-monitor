@@ -222,6 +222,21 @@ async def main():
     
     current_slots = await scraper.get_available_slots()
     
+    # Check if session expired and send notification
+    if scraper.session_expired:
+        logger.error("⚠️ Session has expired! Sending notification...")
+        notifier = Notifier(config)
+        if notifier.notify_session_expired():
+            logger.info("📧 Session expiry notification sent")
+        else:
+            logger.error("❌ Failed to send session expiry notification")
+        print()
+        print("=" * 60)
+        logger.info("❌ Session expired - please login again")
+        print("=" * 60)
+        print()
+        return 2  # Special exit code for session expired
+    
     print()
     logger.info(f"📋 Found {len(current_slots)} total available slots")
     

@@ -42,9 +42,17 @@ jobs:
           mkdir -p data
           if [ -n "$SESSION_DATA" ]; then
             echo "$SESSION_DATA" | base64 -d > data/session.json
-            echo "Session restored from GitHub Secret"
+            echo "✅ Session restored from GitHub Secret"
+            echo "Session file size: $(wc -c < data/session.json) bytes"
+            # Verify it's valid JSON
+            if python3 -c "import json; json.load(open('data/session.json'))"; then
+              echo "✅ Session file is valid JSON"
+            else
+              echo "❌ Session file is NOT valid JSON"
+              cat data/session.json
+            fi
           else
-            echo "No SESSION_DATA secret found"
+            echo "❌ No SESSION_DATA secret found - session will expire!"
           fi
       
       - name: Restore previous slots
