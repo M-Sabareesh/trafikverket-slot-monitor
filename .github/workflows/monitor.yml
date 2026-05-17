@@ -1,24 +1,8 @@
 name: Monitor Trafikverket Slots
 
-          pip install -r requirements.txt
-          playwright install chromium
-          playwright install-deps chromium
-      
-      - name: 🔐 Restore session from secret
-        env:
-          SESSION_DATA: ${{ secrets.SESSION_DATA }}
-        run: |
-          mkdir -p data
-          if [ -n "$SESSION_DATA" ]; then
-            echo "$SESSION_DATA" | base64 -d > data/session.json
-            echo "✅ Session restored from GitHub Secret"
-          else
-            echo "⚠️ No SESSION_DATA secret found, will need to login"
-          fi
-      
-      - name: 📂 Restore previous slotsle:
+on:
+  schedule:
     # Run every 15 minutes, 24/7
-    # Note: GitHub Actions may delay scheduled runs during high load
     - cron: '*/15 * * * *'
   
   # Allow manual trigger
@@ -36,29 +20,34 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: 🐍 Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
       
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: |
           pip install -r requirements.txt
           playwright install chromium
           playwright install-deps chromium
       
-      - name: � Restore session from secret
-        if: ${{ secrets.SESSION_DATA != '' }}
+      - name: Restore session from secret
+        env:
+          SESSION_DATA: ${{ secrets.SESSION_DATA }}
         run: |
           mkdir -p data
-          echo "${{ secrets.SESSION_DATA }}" | base64 -d > data/session.json
-          echo "✅ Session restored from GitHub Secret"
+          if [ -n "$SESSION_DATA" ]; then
+            echo "$SESSION_DATA" | base64 -d > data/session.json
+            echo "Session restored from GitHub Secret"
+          else
+            echo "No SESSION_DATA secret found"
+          fi
       
-      - name: �📂 Restore previous slots
+      - name: Restore previous slots
         uses: actions/cache@v4
         with:
           path: data/previous_slots.json
@@ -66,7 +55,7 @@ jobs:
           restore-keys: |
             slots-
       
-      - name: 🔍 Run slot monitor
+      - name: Run slot monitor
         env:
           BOOKING_URL: ${{ secrets.BOOKING_URL }}
           LOCATION: ${{ secrets.LOCATION }}
@@ -85,7 +74,7 @@ jobs:
           cd src
           python main.py --debug --always-notify || true
       
-      - name: 📸 Upload debug artifacts
+      - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -96,7 +85,7 @@ jobs:
             data/*.html
           retention-days: 7
       
-      - name: 💾 Save slots cache
+      - name: Save slots cache
         uses: actions/cache/save@v4
         if: always()
         with:
