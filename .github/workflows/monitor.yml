@@ -1,7 +1,22 @@
 name: Monitor Trafikverket Slots
 
-on:
-  schedule:
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: 🔐 Restore session from secret
+        env:
+          SESSION_DATA: ${{ secrets.SESSION_DATA }}
+        run: |
+          mkdir -p data
+          if [ -n "$SESSION_DATA" ]; then
+            echo "$SESSION_DATA" | base64 -d > data/session.json
+            echo "✅ Session restored from GitHub Secret"
+          else
+            echo "⚠️ No SESSION_DATA secret found, will need to login"
+          fi
+      
+      - name: 📂 Restore previous slotsle:
     # Run every 15 minutes, 24/7
     # Note: GitHub Actions may delay scheduled runs during high load
     - cron: '*/15 * * * *'

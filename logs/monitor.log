@@ -1729,3 +1729,1011 @@ INFO:scraper:    ✅ Clicked Bekräfta
 INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
 INFO:scraper:    ✅ Selected: Automatbil
 INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 226 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (226 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Torsdag 11 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 10 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (226 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Torsdag 11 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 10 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 226 total available slots
+INFO:__main__:📅 0 slots before 2026-06-11 (filtered from 226)
+INFO:__main__:📭 No slots before 2026-06-11 - skipping email
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #7 - 2026-05-17 11:52:35
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 226 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (226 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Torsdag 11 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 10 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (226 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Torsdag 11 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 10 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 226 total available slots
+INFO:__main__:📅 0 slots before 2026-06-11 (filtered from 226)
+INFO:__main__:📭 No slots before 2026-06-11 - skipping email
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #8 - 2026-05-17 11:55:08
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 226 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (226 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Torsdag 11 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 10 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (226 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Torsdag 11 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 10 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 226 total available slots
+INFO:__main__:📅 0 slots before 2026-06-11 (filtered from 226)
+INFO:__main__:📭 No slots before 2026-06-11 - skipping email
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #9 - 2026-05-17 11:57:35
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
