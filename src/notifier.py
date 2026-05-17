@@ -27,7 +27,9 @@ class Notifier:
         if not login_url:
             login_url = "https://fp.trafikverket.se/Boka/"
         
-        github_actions_url = "https://github.com/M-Sabareesh/trafikverket-slot-monitor/actions/workflows/update-and-run.yml"
+        # Get GitHub repo from environment for dynamic URLs
+        github_repo = os.environ.get("GITHUB_REPOSITORY", "M-Sabareesh/trafikverket-slot-monitor")
+        github_actions_url = f"https://github.com/{github_repo}/actions/workflows/update-and-run.yml"
         
         subject = "⚠️ Trafikverket Monitor: Session Expired - Login Required"
         
@@ -37,21 +39,33 @@ class Notifier:
 Your Trafikverket monitoring session has expired.
 The monitor cannot check for available slots until you log in again.
 
-═══════════════════════════════════════════════════════════
-OPTION 1: From your computer (EASIEST)
-═══════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
+OPTION 1: Python Script (EASIEST - Works on any computer)
+═══════════════════════════════════════════════════════════════
 
-Run this ONE command in your WSL terminal:
+Run this command:
 
-    cd ~/personal/trafik/trafikverket-slot-monitor && ./update_github_session.sh
+    python update_session.py
 
-═══════════════════════════════════════════════════════════
-OPTION 2: From mobile/any device
-═══════════════════════════════════════════════════════════
+This will:
+- Open a browser window
+- Wait for you to login with BankID
+- Automatically extract and save the session
+- Update GitHub and restart monitoring
+
+═══════════════════════════════════════════════════════════════
+OPTION 2: Shell Script (WSL/Linux/Mac)
+═══════════════════════════════════════════════════════════════
+
+    ./update_github_session.sh
+
+═══════════════════════════════════════════════════════════════
+OPTION 3: From Mobile / Any Device
+═══════════════════════════════════════════════════════════════
 
 1. Login to Trafikverket: {login_url}
-2. After login, open browser DevTools (F12) -> Console
-3. Paste this code and press Enter:
+2. Open browser DevTools (F12) → Console
+3. Paste this code:
 
    btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]=c.trim().split('=');return {{name:n,value:v,domain:'fp.trafikverket.se',path:'/'}}}})}}))
 
@@ -68,80 +82,113 @@ Trafikverket Slot Monitor
 <html>
 <head>
     <style>
-        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
-        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
-        .alert {{ background: #fef2f2; border: 1px solid #ef4444; border-radius: 8px; padding: 20px; }}
-        h1 {{ color: #dc2626; font-size: 24px; }}
-        .option {{ background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 15px 0; }}
-        .option-header {{ background: #2563eb; color: white; padding: 8px 15px; border-radius: 5px; display: inline-block; margin-bottom: 10px; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }}
+        .container {{ max-width: 650px; margin: 0 auto; padding: 20px; }}
+        .alert {{ background: linear-gradient(135deg, #fef2f2, #fff1f2); border: 2px solid #ef4444; border-radius: 12px; padding: 24px; margin-bottom: 24px; }}
+        h1 {{ color: #dc2626; margin: 0 0 10px 0; }}
+        .option {{ background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
+        .option-header {{ display: flex; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }}
+        .option-number {{ background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 10px; }}
+        .option-title {{ font-weight: 600; color: #1f2937; font-size: 16px; }}
+        .badge {{ display: inline-block; background: #10b981; color: white; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; text-transform: uppercase; }}
         .command-box {{ 
-            background: #1f2937; 
-            color: #10b981; 
-            padding: 15px 20px; 
+            background: #1e293b; 
+            color: #4ade80; 
+            padding: 14px 18px; 
             border-radius: 8px; 
-            font-family: monospace;
-            margin: 15px 0;
+            font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
             font-size: 13px;
-            word-break: break-all;
+            margin: 12px 0;
+            overflow-x: auto;
         }}
+        .steps {{ background: #f8fafc; padding: 16px; border-radius: 8px; margin-top: 12px; }}
+        .steps ol {{ margin: 0; padding-left: 20px; }}
+        .steps li {{ margin: 8px 0; }}
+        code {{ background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; }}
+        a {{ color: #2563eb; }}
+        a:hover {{ color: #1d4ed8; }}
         .btn {{ 
             display: inline-block; 
             background: #2563eb; 
             color: white !important; 
-            padding: 12px 25px; 
+            padding: 10px 20px; 
+            border-radius: 6px; 
             text-decoration: none; 
-            border-radius: 6px;
-            margin: 10px 5px 10px 0;
             font-weight: 500;
+            margin-top: 8px;
         }}
+        .btn:hover {{ background: #1d4ed8; }}
         .btn-green {{ background: #16a34a; }}
-        ol {{ padding-left: 20px; }}
-        li {{ margin: 8px 0; }}
-        code {{ background: #e5e7eb; padding: 2px 6px; border-radius: 3px; font-family: monospace; font-size: 12px; }}
+        .divider {{ border-top: 1px solid #e5e7eb; margin: 20px 0; }}
+        .footer {{ color: #6b7280; font-size: 12px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #e5e7eb; }}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="alert">
             <h1>⚠️ Session Expired</h1>
-            <p>Your Trafikverket monitoring session has expired.</p>
-            <p>The monitor <strong>cannot check for available slots</strong> until you log in again.</p>
+            <p style="margin: 0; color: #7f1d1d;">Your Trafikverket monitoring session has expired. The monitor <strong>cannot check for available slots</strong> until you log in again.</p>
         </div>
         
+        <h2 style="color: #1f2937; margin-bottom: 16px;">🔧 Choose How to Update</h2>
+        
+        <!-- Option 1: Python Script -->
         <div class="option">
-            <div class="option-header">💻 OPTION 1: From Computer (Easiest)</div>
-            <p>Run this <strong>ONE command</strong> in your WSL terminal:</p>
-            <div class="command-box">
-                cd ~/personal/trafik/trafikverket-slot-monitor && ./update_github_session.sh
+            <div class="option-header">
+                <span class="option-number">1</span>
+                <span class="option-title">Python Script</span>
+                <span class="badge">Easiest</span>
             </div>
-            <p><small>This opens BankID login and updates everything automatically.</small></p>
+            <p style="margin: 0 0 12px 0; color: #4b5563;">Run this on any computer with Python installed:</p>
+            <div class="command-box">python update_session.py</div>
+            <div class="steps">
+                <strong>This will automatically:</strong>
+                <ol>
+                    <li>Open a browser window</li>
+                    <li>Wait for you to login with BankID</li>
+                    <li>Extract and save the session</li>
+                    <li>Update GitHub and restart monitoring</li>
+                </ol>
+            </div>
         </div>
         
+        <!-- Option 2: Shell Script -->
         <div class="option">
-            <div class="option-header">📱 OPTION 2: From Mobile/Any Device</div>
-            
-            <p><strong>Step 1:</strong> Login to Trafikverket</p>
-            <a href="{login_url}" class="btn">🔐 Open Trafikverket</a>
-            
-            <p><strong>Step 2:</strong> After login, extract cookies</p>
-            <p>Open browser DevTools (F12) → Console tab → Paste this:</p>
-            <div class="command-box" style="font-size: 11px;">
-btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]=c.trim().split('=');return {{name:n,value:v,domain:'fp.trafikverket.se',path:'/'}}}})}}))
+            <div class="option-header">
+                <span class="option-number">2</span>
+                <span class="option-title">Shell Script</span>
             </div>
-            <p>Copy the output (starts with <code>eyJ...</code>)</p>
-            
-            <p><strong>Step 3:</strong> Update GitHub</p>
-            <a href="{github_actions_url}" class="btn btn-green">🚀 Open GitHub Actions</a>
-            <ol>
-                <li>Click "Run workflow"</li>
-                <li>Paste the copied data</li>
-                <li>Click green "Run workflow" button</li>
-            </ol>
+            <p style="margin: 0 0 12px 0; color: #4b5563;">For WSL/Linux/Mac terminals:</p>
+            <div class="command-box">./update_github_session.sh</div>
         </div>
         
-        <p style="color: #666; margin-top: 30px; font-size: 12px;">
-            Trafikverket Slot Monitor
-        </p>
+        <!-- Option 3: Mobile/Web -->
+        <div class="option">
+            <div class="option-header">
+                <span class="option-number">3</span>
+                <span class="option-title">Mobile / Any Device</span>
+                <span class="badge" style="background: #8b5cf6;">Remote</span>
+            </div>
+            <p style="margin: 0 0 12px 0; color: #4b5563;">Update from your phone or any browser:</p>
+            <div class="steps">
+                <ol>
+                    <li><strong>Login</strong> to Trafikverket: <a href="{login_url}" target="_blank">{login_url}</a></li>
+                    <li><strong>Extract cookies:</strong> Open DevTools (F12) → Console → paste the code below</li>
+                    <li><strong>Copy</strong> the output (starts with <code>eyJ...</code>)</li>
+                    <li><strong>Go to GitHub Actions</strong> and paste the session data</li>
+                </ol>
+            </div>
+            <p style="margin: 10px 0 5px 0; color: #4b5563;"><strong>Code to paste in console:</strong></p>
+            <div class="command-box" style="font-size: 11px; word-break: break-all;">btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]=c.trim().split('=');return {{name:n,value:v,domain:'fp.trafikverket.se',path:'/'}}}})}}))
+            </div>
+            <a href="{github_actions_url}" class="btn btn-green" target="_blank">
+                🚀 Open GitHub Actions
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Trafikverket Slot Monitor | <a href="https://github.com/{github_repo}">View on GitHub</a></p>
+        </div>
     </div>
 </body>
 </html>
@@ -261,12 +308,12 @@ btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]
                 h1 {{ color: #2563eb; }}
                 table {{ width: 100%; border-collapse: collapse; }}
                 th {{ background: #2563eb; color: white; padding: 12px; text-align: left; }}
-                .cta {{ 
-                    display: inline-block; 
-                    background: #16a34a; 
-                    color: white; 
-                    padding: 15px 30px; 
-                    text-decoration: none; 
+                .cta {{
+                    display: inline-block;
+                    background: #16a34a;
+                    color: white;
+                    padding: 15px 30px;
+                    text-decoration: none;
                     border-radius: 5px;
                     margin-top: 20px;
                 }}
@@ -275,7 +322,6 @@ btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]
         <body>
             <div class="container">
                 <h1>🚗 Nya lediga tider för uppkörning!</h1>
-                
                 <table>
                     <tr>
                         <th>Plats</th>
@@ -284,11 +330,9 @@ btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]
                     </tr>
                     {slots_html}
                 </table>
-                
                 <a href="https://fp.trafikverket.se/Boka/" class="cta">
                     📅 Boka Nu →
                 </a>
-                
                 <p style="color: #666; margin-top: 20px;">
                     ⚡ Hurry! These slots fill up quickly!
                 </p>
@@ -324,13 +368,11 @@ btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]
         """Send Telegram notification."""
         try:
             url = f"https://api.telegram.org/bot{self.config.telegram_bot_token}/sendMessage"
-            
             response = httpx.post(url, json={
                 "chat_id": self.config.telegram_chat_id,
                 "text": message,
                 "parse_mode": "HTML"
             }, timeout=10)
-            
             response.raise_for_status()
             logger.info("✅ Telegram notification sent")
             return True
