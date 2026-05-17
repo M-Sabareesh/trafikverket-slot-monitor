@@ -1,0 +1,58 @@
+name: Update Session and Run Monitor
+
+on:
+  workflow_dispatch:
+    inputs:
+      session_cookies:
+        description: 'Paste the cookies from browser (see instructions in README)'
+        required: true
+        type: string
+
+jobs:
+  update-and-run:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Create session file from input
+        run: |
+          mkdir -p data
+          # The input is expected to be base64 encoded session JSON
+          echo "${{ github.event.inputs.session_cookies }}" | base64 -d > data/session.json
+          echo "✅ Session file created"
+          echo "File size: $(wc -c < data/session.json) bytes"
+      
+      - name: Update SESSION_DATA secret
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Re-encode and update the secret for future runs
+          SESSION_B64=$(cat data/session.json | base64 -w 0)
+          echo "$SESSION_B64" | gh secret set SESSION_DATA --repo ${{ github.repository }}
+          echo "✅ SESSION_DATA secret updated for future runs"
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: Run slot monitor
+        env:
+          LOCATION: ${{ secrets.LOCATION }}
+          NOTIFY_BEFORE_DATE: ${{ secrets.NOTIFY_BEFORE_DATE }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          cd src
+          python main.py --debug --always-notify

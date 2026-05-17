@@ -27,48 +27,77 @@ class Notifier:
         if not login_url:
             login_url = "https://fp.trafikverket.se/Boka/"
         
+        github_actions_url = "https://github.com/M-Sabareesh/trafikverket-slot-monitor/actions/workflows/update-and-run.yml"
+        
         subject = "⚠️ Trafikverket Monitor: Session Expired - Login Required"
         
-        plain_message = """
+        plain_message = f"""
 ⚠️ SESSION EXPIRED
 
 Your Trafikverket monitoring session has expired.
 The monitor cannot check for available slots until you log in again.
 
-� TO FIX THIS (run this ONE command in your terminal):
+═══════════════════════════════════════════════════════════
+OPTION 1: From your computer (EASIEST)
+═══════════════════════════════════════════════════════════
+
+Run this ONE command in your WSL terminal:
 
     cd ~/personal/trafik/trafikverket-slot-monitor && ./update_github_session.sh
 
-This will:
-1. Open browser for BankID login
-2. Save the new session
-3. Update GitHub automatically
-4. Restart the monitoring
+═══════════════════════════════════════════════════════════
+OPTION 2: From mobile/any device
+═══════════════════════════════════════════════════════════
+
+1. Login to Trafikverket: {login_url}
+2. After login, open browser DevTools (F12) -> Console
+3. Paste this code and press Enter:
+
+   btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]=c.trim().split('=');return {{name:n,value:v,domain:'fp.trafikverket.se',path:'/'}}}})}}))
+
+4. Copy the output (starts with "eyJ...")
+5. Go to: {github_actions_url}
+6. Click "Run workflow", paste the data, and run
 
 ---
 Trafikverket Slot Monitor
 """
         
-        html_message = """
+        html_message = f"""
 <!DOCTYPE html>
 <html>
 <head>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .alert { background: #fef2f2; border: 1px solid #ef4444; border-radius: 8px; padding: 20px; }
-        h1 { color: #dc2626; }
-        .command-box { 
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
+        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+        .alert {{ background: #fef2f2; border: 1px solid #ef4444; border-radius: 8px; padding: 20px; }}
+        h1 {{ color: #dc2626; font-size: 24px; }}
+        .option {{ background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 15px 0; }}
+        .option-header {{ background: #2563eb; color: white; padding: 8px 15px; border-radius: 5px; display: inline-block; margin-bottom: 10px; }}
+        .command-box {{ 
             background: #1f2937; 
             color: #10b981; 
             padding: 15px 20px; 
             border-radius: 8px; 
             font-family: monospace;
-            margin: 20px 0;
-            font-size: 14px;
-        }
-        .steps { background: #f3f4f6; padding: 15px; border-radius: 5px; margin-top: 20px; }
-        code { background: #e5e7eb; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+            margin: 15px 0;
+            font-size: 13px;
+            word-break: break-all;
+        }}
+        .btn {{ 
+            display: inline-block; 
+            background: #2563eb; 
+            color: white !important; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            border-radius: 6px;
+            margin: 10px 5px 10px 0;
+            font-weight: 500;
+        }}
+        .btn-green {{ background: #16a34a; }}
+        ol {{ padding-left: 20px; }}
+        li {{ margin: 8px 0; }}
+        code {{ background: #e5e7eb; padding: 2px 6px; border-radius: 3px; font-family: monospace; font-size: 12px; }}
     </style>
 </head>
 <body>
@@ -79,20 +108,34 @@ Trafikverket Slot Monitor
             <p>The monitor <strong>cannot check for available slots</strong> until you log in again.</p>
         </div>
         
-        <h2>🔧 To Fix This</h2>
-        <p>Run this <strong>ONE command</strong> in your WSL terminal:</p>
-        
-        <div class="command-box">
-            cd ~/personal/trafik/trafikverket-slot-monitor && ./update_github_session.sh
+        <div class="option">
+            <div class="option-header">💻 OPTION 1: From Computer (Easiest)</div>
+            <p>Run this <strong>ONE command</strong> in your WSL terminal:</p>
+            <div class="command-box">
+                cd ~/personal/trafik/trafikverket-slot-monitor && ./update_github_session.sh
+            </div>
+            <p><small>This opens BankID login and updates everything automatically.</small></p>
         </div>
         
-        <div class="steps">
-            <h3>This will automatically:</h3>
+        <div class="option">
+            <div class="option-header">📱 OPTION 2: From Mobile/Any Device</div>
+            
+            <p><strong>Step 1:</strong> Login to Trafikverket</p>
+            <a href="{login_url}" class="btn">🔐 Open Trafikverket</a>
+            
+            <p><strong>Step 2:</strong> After login, extract cookies</p>
+            <p>Open browser DevTools (F12) → Console tab → Paste this:</p>
+            <div class="command-box" style="font-size: 11px;">
+btoa(JSON.stringify({{cookies: document.cookie.split(';').map(c => {{const [n,v]=c.trim().split('=');return {{name:n,value:v,domain:'fp.trafikverket.se',path:'/'}}}})}}))
+            </div>
+            <p>Copy the output (starts with <code>eyJ...</code>)</p>
+            
+            <p><strong>Step 3:</strong> Update GitHub</p>
+            <a href="{github_actions_url}" class="btn btn-green">🚀 Open GitHub Actions</a>
             <ol>
-                <li>✅ Open browser for BankID login</li>
-                <li>✅ Save the new session locally</li>
-                <li>✅ Update GitHub secret</li>
-                <li>✅ Restart the monitoring workflow</li>
+                <li>Click "Run workflow"</li>
+                <li>Paste the copied data</li>
+                <li>Click green "Run workflow" button</li>
             </ol>
         </div>
         
