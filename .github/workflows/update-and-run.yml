@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       session_cookies:
-        description: 'Paste the cookies from browser (see instructions in README)'
+        description: 'Paste the base64 session data (from browser console)'
         required: true
         type: string
 
@@ -28,15 +28,28 @@ jobs:
           echo "${{ github.event.inputs.session_cookies }}" | base64 -d > data/session.json
           echo "✅ Session file created"
           echo "File size: $(wc -c < data/session.json) bytes"
+          # Validate JSON
+          if python3 -c "import json; json.load(open('data/session.json'))"; then
+            echo "✅ Valid JSON"
+          else
+            echo "❌ Invalid JSON - please check your input"
+            exit 1
+          fi
       
-      - name: Update SESSION_DATA secret
+      - name: Try to update SESSION_DATA secret (optional)
+        continue-on-error: true
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          # Re-encode and update the secret for future runs
-          SESSION_B64=$(cat data/session.json | base64 -w 0)
-          echo "$SESSION_B64" | gh secret set SESSION_DATA --repo ${{ github.repository }}
-          echo "✅ SESSION_DATA secret updated for future runs"
+          if [ -n "$GH_TOKEN" ]; then
+            SESSION_B64=$(cat data/session.json | base64 -w 0)
+            echo "$SESSION_B64" | gh secret set SESSION_DATA --repo ${{ github.repository }}
+            echo "✅ SESSION_DATA secret updated for future runs"
+          else
+            echo "⚠️ GH_PAT secret not set - session won't persist to future scheduled runs"
+            echo "   To fix: Add a Personal Access Token as GH_PAT secret"
+            echo "   For now, this run will use the provided session"
+          fi
       
       - name: Install dependencies
         run: |
