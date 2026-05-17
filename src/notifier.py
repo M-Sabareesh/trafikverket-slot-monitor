@@ -4,6 +4,7 @@ Notification handlers for sending alerts about new slots.
 
 import smtplib
 import logging
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from typing import List, TYPE_CHECKING
@@ -21,6 +22,123 @@ class Notifier:
     def __init__(self, config: "Config"):
         self.config = config
     
+    def notify_session_expired(self, login_url: str = None) -> bool:
+        """Send notification that the session has expired and login is required."""
+        if not login_url:
+            login_url = "https://fp.trafikverket.se/Boka/"
+        
+        subject = "⚠️ Trafikverket Monitor: Session Expired - Login Required"
+        
+        plain_message = f"""
+⚠️ SESSION EXPIRED
+
+Your Trafikverket monitoring session has expired.
+The monitor cannot check for available slots until you log in again.
+
+🔐 Please log in to resume monitoring:
+{login_url}
+
+After logging in:
+1. Run: ./update_github_session.sh
+2. Or manually update the SESSION_DATA secret on GitHub
+
+---
+Trafikverket Slot Monitor
+"""
+        
+        html_message = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {{ font-family: Arial, sans-serif; }}
+        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+        .alert {{ background: #fef2f2; border: 1px solid #ef4444; border-radius: 8px; padding: 20px; }}
+        h1 {{ color: #dc2626; }}
+        .cta {{ 
+            display: inline-block; 
+            background: #2563eb; 
+            color: white; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            border-radius: 5px;
+            margin-top: 20px;
+        }}
+        .steps {{ background: #f3f4f6; padding: 15px; border-radius: 5px; margin-top: 20px; }}
+        code {{ background: #e5e7eb; padding: 2px 6px; border-radius: 3px; }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert">
+            <h1>⚠️ Session Expired</h1>
+            <p>Your Trafikverket monitoring session has expired.</p>
+            <p>The monitor <strong>cannot check for available slots</strong> until you log in again.</p>
+        </div>
+        
+        <a href="{login_url}" class="cta">
+            🔐 Log In Now →
+        </a>
+        
+        <div class="steps">
+            <h3>After logging in:</h3>
+            <ol>
+                <li>Open terminal in the project folder</li>
+                <li>Run: <code>./update_github_session.sh</code></li>
+                <li>Or manually update the <code>SESSION_DATA</code> secret on GitHub</li>
+            </ol>
+        </div>
+        
+        <p style="color: #666; margin-top: 30px; font-size: 12px;">
+            Trafikverket Slot Monitor
+        </p>
+    </div>
+</body>
+</html>
+"""
+        
+        success = False
+        
+        # Email notification
+        if self.config.smtp_username and self.config.notification_email:
+            if self._send_session_expired_email(subject, plain_message, html_message):
+                success = True
+        
+        # Telegram notification
+        if self.config.telegram_bot_token and self.config.telegram_chat_id:
+            if self._send_telegram(plain_message):
+                success = True
+        
+        # Discord notification  
+        if self.config.discord_webhook_url:
+            if self._send_discord(plain_message):
+                success = True
+        
+        return success
+    
+    def _send_session_expired_email(self, subject: str, plain: str, html: str) -> bool:
+        """Send session expired email notification."""
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["From"] = self.config.smtp_username
+            msg["To"] = self.config.notification_email
+            msg["Subject"] = subject
+
+            msg.attach(MIMEText(plain, "plain", "utf-8"))
+            msg.attach(MIMEText(html, "html", "utf-8"))
+            
+            with smtplib.SMTP(self.config.smtp_server, self.config.smtp_port) as server:
+                server.starttls()
+                server.login(self.config.smtp_username, self.config.smtp_password)
+                server.send_message(msg)
+            
+            logger.info(f"✅ Session expired email sent to {self.config.notification_email}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Session expired email failed: {e}")
+            return False
+
     def notify(self, slots: List["TestSlot"]):
         """Send notifications through all configured channels."""
         if not slots:

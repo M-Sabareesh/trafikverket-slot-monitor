@@ -61,6 +61,7 @@ class TrafikverketScraper:
         self.data_dir.mkdir(exist_ok=True)
         self.slots_file = self.data_dir / "previous_slots.json"
         self.session_file = Path(config.session_file)
+        self.session_expired = False  # Track if session has expired
     
     async def get_available_slots(self) -> List[TestSlot]:
         """Fetch all available slots from the booking portal."""
@@ -84,14 +85,26 @@ class TrafikverketScraper:
                 logged_in = await self._check_login_status(page)
                 
                 if not logged_in:
+                    # In headless mode (automated), session has expired
+                    if self.config.headless:
+                        logger.error("❌ Session expired! Login required.")
+                        self.session_expired = True
+                        await page.screenshot(path=str(self.data_dir / "session_expired.png"))
+                        return slots
+                    
+                    # In interactive mode, try to login
                     logger.info("🔐 Not logged in. Starting BankID login flow...")
                     logged_in = await self._perform_login(page)
                     
                     if not logged_in:
                         logger.error("❌ Login failed. Please try again.")
+                        self.session_expired = True
                         # Take screenshot to see what happened
                         await page.screenshot(path=str(self.data_dir / "login_failed.png"))
                         return slots
+                
+                # Reset session expired flag on successful login
+                self.session_expired = False
                 
                 # Save session after successful login
                 logger.info("💾 Saving session...")

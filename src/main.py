@@ -288,6 +288,7 @@ async def run_loop(args, config):
     print()
     
     run_count = 0
+    session_expiry_notified = False  # Track if we've already sent expiry notification
     
     while True:
         run_count += 1
@@ -305,6 +306,28 @@ async def run_loop(args, config):
             
             # Fetch current slots
             current_slots = await scraper.get_available_slots()
+            
+            # Check if session expired
+            if scraper.session_expired:
+                logger.error("⚠️ Session has expired!")
+                
+                # Send notification only once (not on every run)
+                if not session_expiry_notified:
+                    notifier = Notifier(config)
+                    if notifier.notify_session_expired():
+                        logger.info("📧 Session expiry notification sent")
+                        session_expiry_notified = True
+                    else:
+                        logger.error("❌ Failed to send session expiry notification")
+                else:
+                    logger.info("📧 Session expiry notification already sent")
+                
+                logger.info(f"💤 Sleeping for {args.interval} seconds before retry...")
+                await asyncio.sleep(args.interval)
+                continue
+            
+            # Reset expiry notification flag on successful login
+            session_expiry_notified = False
             
             logger.info(f"📋 Found {len(current_slots)} total available slots")
             

@@ -1,0 +1,39 @@
+name: Update Session
+
+on:
+  # Allow manual trigger with session data input
+  workflow_dispatch:
+    inputs:
+      session_data:
+        description: 'Base64 encoded session data (from ./export_session.sh)'
+        required: true
+        type: string
+
+jobs:
+  update-session:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Validate session data
+        run: |
+          if [ -z "${{ github.event.inputs.session_data }}" ]; then
+            echo "❌ Session data is required"
+            exit 1
+          fi
+          echo "✅ Session data received"
+      
+      - name: Update SESSION_DATA secret
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          # This requires a Personal Access Token with 'repo' scope
+          # stored as GH_PAT secret
+          echo "${{ github.event.inputs.session_data }}" | gh secret set SESSION_DATA --repo ${{ github.repository }}
+          echo "✅ SESSION_DATA secret updated!"
+      
+      - name: Trigger monitor run
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          gh workflow run monitor.yml --repo ${{ github.repository }}
+          echo "✅ Monitor workflow triggered!"
