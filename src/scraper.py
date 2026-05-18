@@ -206,7 +206,11 @@ class TrafikverketScraper:
         )
     
     def _check_session_validity(self) -> bool:
-        """Check if the saved session cookies are still valid (not expired)."""
+        """Check if the saved session cookies are still valid (not expired).
+        
+        The LoginValid cookie contains the session expiration time in its VALUE
+        (e.g., "2026-05-18 15:30"), not in the cookie's expires field.
+        """
         try:
             with open(self.session_file, 'r') as f:
                 session_data = json.load(f)
@@ -216,34 +220,54 @@ class TrafikverketScraper:
                 logger.warning("⚠️ No cookies found in session file")
                 return False
             
-            now = datetime.now().timestamp()
+            now = datetime.now()
             
             # Look for critical session cookies
-            critical_cookies = ['LoginValid', 'ASP.NET_SessionId']
-            has_valid_session = False
+            has_login_valid = False
+            has_session_id = False
             
             for cookie in cookies:
                 name = cookie.get('name', '')
+                value = cookie.get('value', '')
                 expires = cookie.get('expires', 0)
                 
-                # Check LoginValid cookie specifically
+                # Check LoginValid cookie specifically - the VALUE contains the expiration datetime
                 if name == 'LoginValid':
-                    if expires > 0 and expires < now:
-                        logger.warning(f"⚠️ LoginValid cookie expired at {datetime.fromtimestamp(expires)}")
-                        return False
-                    elif expires > 0:
-                        logger.info(f"✅ LoginValid cookie valid until {datetime.fromtimestamp(expires)}")
-                        has_valid_session = True
+                    try:
+                        # Parse the value as a datetime (format: "YYYY-MM-DD HH:MM")
+                        login_valid_time = datetime.strptime(value, "%Y-%m-%d %H:%M")
+                        if login_valid_time < now:
+                            logger.warning(f"⚠️ LoginValid session expired at {value} (current time: {now.strftime('%Y-%m-%d %H:%M')})")
+                            return False
+                        else:
+                            time_remaining = login_valid_time - now
+                            minutes_remaining = int(time_remaining.total_seconds() / 60)
+                            logger.info(f"✅ LoginValid session valid until {value} ({minutes_remaining} minutes remaining)")
+                            has_login_valid = True
+                    except ValueError as e:
+                        logger.warning(f"⚠️ Could not parse LoginValid value '{value}': {e}")
+                        # Check the cookie expires field as fallback
+                        if expires > 0 and expires > now.timestamp():
+                            has_login_valid = True
                 
-                # Check for any valid session-related cookies
-                if name in critical_cookies or 'session' in name.lower():
-                    if expires == -1 or expires == 0:
-                        # Session cookie (no expiration) - assume it might work
-                        has_valid_session = True
-                    elif expires > now:
-                        has_valid_session = True
+                # Check for ASP.NET session cookie
+                if name == 'ASP.NET_SessionId':
+                    if value:
+                        has_session_id = True
+                        logger.info(f"✅ Found ASP.NET_SessionId cookie")
             
-            return has_valid_session
+            # Need both LoginValid and session ID for a valid session
+            if has_login_valid and has_session_id:
+                return True
+            elif has_login_valid:
+                logger.warning("⚠️ LoginValid found but no ASP.NET_SessionId")
+                return True  # Still try, might work
+            elif has_session_id:
+                logger.warning("⚠️ ASP.NET_SessionId found but no valid LoginValid")
+                return False
+            else:
+                logger.warning("⚠️ No valid session cookies found")
+                return False
             
         except Exception as e:
             logger.warning(f"Could not validate session: {e}")
