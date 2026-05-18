@@ -15,6 +15,11 @@ on:
       - 'src/**'
       - 'requirements.txt'
 
+# Prevent concurrent runs - cancel in-progress if new one starts
+concurrency:
+  group: trafikverket-monitor
+  cancel-in-progress: true
+
 jobs:
   check-slots:
     runs-on: ubuntu-latest
