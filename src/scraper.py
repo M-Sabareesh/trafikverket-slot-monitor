@@ -140,8 +140,17 @@ class TrafikverketScraper:
                 # Close any popups/overlays that appeared after login
                 await self._close_overlays(page)
                 
+                # Take screenshot before navigation
+                await page.screenshot(path=str(self.data_dir / "before_navigation.png"))
+                
+                # Log current URL
+                logger.info(f"📍 Current URL: {page.url}")
+                
                 # Navigate to booking and select options
                 await self._navigate_to_search(page)
+                
+                # Take screenshot after navigation
+                await page.screenshot(path=str(self.data_dir / "after_navigation.png"))
                 
                 # Select booking options
                 await self._select_booking_options(page)
@@ -761,7 +770,7 @@ class TrafikverketScraper:
                     continue
         
         # Wait for the booking page to load
-        await asyncio.sleep(3)
+        await asyncio.sleep(5)  # Increased wait time for GitHub Actions
         
         # Close any login dialogs that might have appeared
         await self._close_login_dialog(page)
@@ -773,14 +782,24 @@ class TrafikverketScraper:
         # Look for the booking form selectors
         form_selectors = ['#licence-type-select', '#examination-type-select', '#select-location-search', '#vehicle-select']
         form_found = False
-        for selector in form_selectors:
-            try:
-                if await page.locator(selector).count() > 0:
-                    form_found = True
-                    logger.info(f"  ✅ Found booking form element: {selector}")
-                    break
-            except:
-                continue
+        
+        # Try multiple times to find the form (page might still be loading)
+        for attempt in range(3):
+            for selector in form_selectors:
+                try:
+                    if await page.locator(selector).count() > 0:
+                        form_found = True
+                        logger.info(f"  ✅ Found booking form element: {selector}")
+                        break
+                except:
+                    continue
+            
+            if form_found:
+                break
+            
+            # Wait and try again
+            logger.info(f"  ⏳ Waiting for booking form (attempt {attempt + 1}/3)...")
+            await asyncio.sleep(3)
         
         if not form_found:
             logger.warning("  ⚠️ Booking form not found - may need to wait longer or page didn't load")
@@ -789,8 +808,6 @@ class TrafikverketScraper:
             with open(self.data_dir / "debug_page.html", "w", encoding="utf-8") as f:
                 f.write(content)
             logger.info("  📄 Saved page HTML to data/debug_page.html for debugging")
-            # Try waiting a bit more
-            await asyncio.sleep(2)
         
         logger.info("✅ Navigated to booking page")
     
