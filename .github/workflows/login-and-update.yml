@@ -45,13 +45,12 @@ jobs:
           echo "⏱️  Waiting up to ${BANKID_WAIT_TIME} seconds for login..."
           echo ""
           
-          cd src
-          python main.py --login --save-session --wait-time=${BANKID_WAIT_TIME} 2>&1 || true
+          python src/main.py --login --save-session --wait-time=${BANKID_WAIT_TIME} 2>&1 || true
           
           # Check if session was saved
-          if [ -f "../data/session.json" ]; then
+          if [ -f "data/session.json" ]; then
             echo "✅ Session file created!"
-            SESSION_SIZE=$(wc -c < ../data/session.json)
+            SESSION_SIZE=$(wc -c < data/session.json)
             echo "   Size: ${SESSION_SIZE} bytes"
           else
             echo "❌ Session file not created - login may have failed"

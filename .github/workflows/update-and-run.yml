@@ -67,5 +67,4 @@ jobs:
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: |
-          cd src
-          python main.py --debug --always-notify
+          python src/main.py --debug --always-notify

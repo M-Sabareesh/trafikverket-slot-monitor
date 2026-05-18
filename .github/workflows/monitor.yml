@@ -79,8 +79,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          cd src
-          python main.py --debug --always-notify || true
+          python src/main.py --debug --always-notify || true
       
       - name: Upload debug artifacts
         if: always()

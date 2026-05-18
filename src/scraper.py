@@ -115,10 +115,23 @@ class TrafikverketScraper:
                 logger.info("⏳ Waiting for all cookies to be set...")
                 await asyncio.sleep(5)
                 
+                # Close any login dialog that might still be visible
+                await self._close_login_dialog(page)
+                
                 # Navigate around to ensure we get all cookies
                 logger.info("🔄 Navigating to capture all session cookies...")
                 await page.goto(self.BASE_URL + "#/search", wait_until='networkidle', timeout=30000)
                 await asyncio.sleep(2)
+                
+                # Close login dialog again if it appeared after navigation
+                await self._close_login_dialog(page)
+                
+                # Verify we're still logged in after navigation
+                if not await self._verify_logged_in(page):
+                    logger.error("❌ Session lost after navigation!")
+                    self.session_expired = True
+                    await page.screenshot(path=str(self.data_dir / "session_lost.png"))
+                    return slots
                 
                 # Save session after navigation
                 logger.info("💾 Saving session...")
@@ -158,6 +171,14 @@ class TrafikverketScraper:
         if self.session_file.exists():
             try:
                 logger.info("📂 Loading saved session...")
+                
+                # First, check if session cookies are still valid
+                if not self._check_session_validity():
+                    logger.warning("⚠️ Session cookies appear to be expired!")
+                    if self.config.headless:
+                        # In headless mode, flag session as expired
+                        self.session_expired = True
+                
                 context = await browser.new_context(
                     storage_state=str(self.session_file),
                     viewport={'width': 1280, 'height': 800},
@@ -171,6 +192,50 @@ class TrafikverketScraper:
             viewport={'width': 1280, 'height': 800},
             user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         )
+    
+    def _check_session_validity(self) -> bool:
+        """Check if the saved session cookies are still valid (not expired)."""
+        try:
+            with open(self.session_file, 'r') as f:
+                session_data = json.load(f)
+            
+            cookies = session_data.get('cookies', [])
+            if not cookies:
+                logger.warning("⚠️ No cookies found in session file")
+                return False
+            
+            now = datetime.now().timestamp()
+            
+            # Look for critical session cookies
+            critical_cookies = ['LoginValid', 'ASP.NET_SessionId']
+            has_valid_session = False
+            
+            for cookie in cookies:
+                name = cookie.get('name', '')
+                expires = cookie.get('expires', 0)
+                
+                # Check LoginValid cookie specifically
+                if name == 'LoginValid':
+                    if expires > 0 and expires < now:
+                        logger.warning(f"⚠️ LoginValid cookie expired at {datetime.fromtimestamp(expires)}")
+                        return False
+                    elif expires > 0:
+                        logger.info(f"✅ LoginValid cookie valid until {datetime.fromtimestamp(expires)}")
+                        has_valid_session = True
+                
+                # Check for any valid session-related cookies
+                if name in critical_cookies or 'session' in name.lower():
+                    if expires == -1 or expires == 0:
+                        # Session cookie (no expiration) - assume it might work
+                        has_valid_session = True
+                    elif expires > now:
+                        has_valid_session = True
+            
+            return has_valid_session
+            
+        except Exception as e:
+            logger.warning(f"Could not validate session: {e}")
+            return True  # Give benefit of doubt
     
     async def _save_session(self, context: BrowserContext):
         """Save browser session (cookies, storage) for reuse."""
@@ -211,6 +276,28 @@ class TrafikverketScraper:
             # Take screenshot to see current state
             await page.screenshot(path=str(self.data_dir / "login_check.png"))
             
+            # FIRST: Check for NOT logged in indicators (login dialogs, etc.)
+            # These take priority - if we see a login dialog, we're NOT logged in
+            not_logged_in_indicators = [
+                'app-login-dialog',
+                '.login-dialog',
+                '.login-title',
+                'text="Logga in"',
+                'button:has-text("Mobilt BankID")',
+                'text="Personnummer"',
+                '[id*="social-security"]',
+                'text="Engångskod"',
+            ]
+            
+            for selector in not_logged_in_indicators:
+                try:
+                    elem = page.locator(selector)
+                    if await elem.count() > 0 and await elem.first.is_visible():
+                        logger.info(f"❌ Found login dialog indicator: {selector} - NOT logged in")
+                        return False
+                except:
+                    continue
+            
             # Check for login indicators - if we see booking options, we're logged in
             logged_in_indicators = [
                 'text="Vad vill du boka?"',
@@ -219,22 +306,33 @@ class TrafikverketScraper:
                 'a:has-text("Logga ut")',
                 'select:has-text("Personbil")',
                 '[class*="booking-form"]',
+                '#licence-type-select',
+                '#examination-type-select',
+                'text="Mina prov"',
             ]
             
             for selector in logged_in_indicators:
                 try:
                     elem = page.locator(selector)
                     if await elem.count() > 0:
-                        logger.info(f"✅ Found logged-in indicator: {selector}")
-                        return True
+                        # Double-check it's visible and not behind a login overlay
+                        try:
+                            if await elem.first.is_visible():
+                                logger.info(f"✅ Found logged-in indicator: {selector}")
+                                return True
+                        except:
+                            pass
                 except:
                     continue
             
-            # Also check URL - if redirected to booking page, we're logged in
+            # Also check URL - but only if no login dialog was found
             current_url = page.url
             if '/search/' in current_url or '/booking/' in current_url:
-                logger.info(f"✅ URL indicates logged in: {current_url}")
-                return True
+                # Verify we're actually on a logged-in page by checking page content
+                content = await page.content()
+                if 'app-login-dialog' not in content and 'Logga in' not in content:
+                    logger.info(f"✅ URL indicates logged in: {current_url}")
+                    return True
             
             return False
             
@@ -285,33 +383,66 @@ class TrafikverketScraper:
             while (asyncio.get_event_loop().time() - start_time) < timeout_seconds:
                 # Check multiple indicators of successful login
                 try:
-                    # Check URL change (often redirects after login)
-                    current_url = page.url
-                    if '/search/' in current_url or '/ng/' in current_url:
-                        logger.info(f"✅ Detected redirect to: {current_url}")
-                        return True
-                    
-                    # Check for booking form elements
-                    indicators = [
-                        'text="Vad vill du boka?"',
-                        'select >> text="Personbil"',
-                        'text="Välj prov"',
-                        'button:has-text("Logga ut")',
-                        'a:has-text("Logga ut")',
+                    # FIRST: Check if login dialog is still visible (means NOT logged in yet)
+                    login_dialog_visible = False
+                    login_dialog_selectors = [
+                        'app-login-dialog',
+                        '.login-dialog',
+                        '.login-title',
                     ]
-                    
-                    for selector in indicators:
+                    for dialog_selector in login_dialog_selectors:
                         try:
-                            elem = page.locator(selector)
-                            if await elem.count() > 0:
-                                logger.info(f"✅ BankID authentication successful!")
-                                logger.info(f"   Detected element: {selector}")
-                                # Wait a bit for all cookies to be set
-                                logger.info("⏳ Waiting for cookies to be fully set...")
-                                await asyncio.sleep(3)
-                                return True
+                            dialog = page.locator(dialog_selector)
+                            if await dialog.count() > 0 and await dialog.first.is_visible():
+                                login_dialog_visible = True
+                                break
                         except:
                             continue
+                    
+                    # If login dialog is NOT visible, check for success indicators
+                    if not login_dialog_visible:
+                        # Check for booking form elements that indicate successful login
+                        indicators = [
+                            'text="Vad vill du boka?"',
+                            'select >> text="Personbil"',
+                            'text="Välj prov"',
+                            'button:has-text("Logga ut")',
+                            'a:has-text("Logga ut")',
+                            '#licence-type-select',
+                        ]
+                        
+                        for selector in indicators:
+                            try:
+                                elem = page.locator(selector)
+                                if await elem.count() > 0 and await elem.first.is_visible():
+                                    logger.info(f"✅ BankID authentication successful!")
+                                    logger.info(f"   Detected element: {selector}")
+                                    # Wait a bit for all cookies to be set
+                                    logger.info("⏳ Waiting for cookies to be fully set...")
+                                    await asyncio.sleep(3)
+                                    return True
+                            except:
+                                continue
+                        
+                        # Check URL change AND verify no login dialog is showing
+                        current_url = page.url
+                        if '/search/' in current_url or '/ng/' in current_url:
+                            # Wait a moment to see if a login dialog appears
+                            await asyncio.sleep(1)
+                            # Re-check for login dialog after URL change
+                            still_has_dialog = False
+                            for dialog_selector in login_dialog_selectors:
+                                try:
+                                    dialog = page.locator(dialog_selector)
+                                    if await dialog.count() > 0 and await dialog.first.is_visible():
+                                        still_has_dialog = True
+                                        break
+                                except:
+                                    continue
+                            
+                            if not still_has_dialog:
+                                logger.info(f"✅ Detected redirect to: {current_url} (no login dialog)")
+                                return True
                     
                 except Exception as e:
                     logger.debug(f"Check error: {e}")
@@ -352,6 +483,90 @@ class TrafikverketScraper:
                     
         except Exception:
             pass
+    
+    async def _close_login_dialog(self, page: Page):
+        """Close the login dialog if it's visible (click Cancel/Avbryt)."""
+        try:
+            # Try to find and close the login dialog
+            close_selectors = [
+                'app-login-dialog button:has-text("Avbryt")',
+                'app-login-dialog button:has-text("Cancel")',
+                'app-login-dialog button.btn-secondary',
+                '.login-dialog button:has-text("Avbryt")',
+                '.login-dialog button:has-text("Cancel")',
+            ]
+            
+            for selector in close_selectors:
+                try:
+                    btn = page.locator(selector)
+                    if await btn.count() > 0 and await btn.first.is_visible():
+                        await btn.first.click()
+                        logger.info(f"  ✅ Closed login dialog: {selector}")
+                        await asyncio.sleep(1)
+                        return True
+                except:
+                    continue
+            
+            # Also try clicking outside the dialog (on the overlay backdrop)
+            try:
+                overlay = page.locator('.overlay-container.show')
+                if await overlay.count() > 0:
+                    # Press Escape to close
+                    await page.keyboard.press('Escape')
+                    logger.info("  ✅ Closed login dialog with Escape key")
+                    await asyncio.sleep(1)
+                    return True
+            except:
+                pass
+                
+        except Exception as e:
+            logger.debug(f"Error closing login dialog: {e}")
+        
+        return False
+    
+    async def _verify_logged_in(self, page: Page) -> bool:
+        """Quick check if we're logged in (no navigation, just check current page)."""
+        try:
+            # Check for login dialog indicators (means NOT logged in)
+            login_dialog_selectors = [
+                'app-login-dialog',
+                '.login-dialog',
+                '.login-title',
+            ]
+            
+            for selector in login_dialog_selectors:
+                try:
+                    elem = page.locator(selector)
+                    if await elem.count() > 0 and await elem.first.is_visible():
+                        logger.info(f"❌ Login dialog still visible: {selector}")
+                        return False
+                except:
+                    continue
+            
+            # Check for logged-in indicators
+            logged_in_selectors = [
+                '#licence-type-select',
+                '#examination-type-select',
+                'button:has-text("Logga ut")',
+                'a:has-text("Logga ut")',
+                'text="Vad vill du boka?"',
+            ]
+            
+            for selector in logged_in_selectors:
+                try:
+                    elem = page.locator(selector)
+                    if await elem.count() > 0:
+                        logger.info(f"✅ Verified logged in: {selector}")
+                        return True
+                except:
+                    continue
+            
+            # If no clear indicators, assume we need to check further
+            return True  # Give benefit of doubt
+            
+        except Exception as e:
+            logger.debug(f"Error verifying login: {e}")
+            return True  # Give benefit of doubt
     
     async def _close_overlays(self, page: Page):
         """Close any overlay/modal dialogs that might be blocking interaction."""
@@ -421,6 +636,9 @@ class TrafikverketScraper:
                 break
             await asyncio.sleep(0.5)
         
+        # Also close any login dialogs
+        await self._close_login_dialog(page)
+        
         await asyncio.sleep(1)
         
         # First, check if slots are already visible on the page
@@ -429,34 +647,58 @@ class TrafikverketScraper:
             logger.info("  ✅ Slots already visible - skipping navigation")
             return
         
-        # Step 1: Click on "Mina Prov" (My Tests) tab
+        # Check if booking form is already visible
+        form_visible = await page.locator('#licence-type-select').count() > 0
+        if form_visible:
+            logger.info("  ✅ Booking form already visible - skipping navigation")
+            return
+        
+        # Step 1: Click on "Mina Prov" (My Tests) tab - use specific desktop/mobile button IDs
         logger.info("  → Looking for Mina prov tab...")
         mina_prov_clicked = False
         
-        # Try specific tab selector first
-        try:
-            tab = page.locator('[role="tab"]:has-text("Mina prov"), a:has-text("Mina prov"), .menu-item:has-text("Mina prov")')
-            if await tab.count() > 0:
-                await tab.first.click(force=True)
-                logger.info("  ✅ Clicked: Mina prov tab")
-                mina_prov_clicked = True
-        except Exception as e:
-            logger.debug(f"Tab click failed: {e}")
+        # Try specific button IDs first (from the Angular app)
+        mina_prov_selectors = [
+            '#desktop-exams-button',
+            '#mobile-exams-button',
+            'button:has-text("Mina prov")',
+            '[role="tab"]:has-text("Mina prov")',
+            'a:has-text("Mina prov")',
+            '.menu-item:has-text("Mina prov")',
+            'button[title="Mina prov"]',
+        ]
+        
+        for selector in mina_prov_selectors:
+            try:
+                btn = page.locator(selector)
+                if await btn.count() > 0 and await btn.first.is_visible():
+                    await btn.first.click(force=True)
+                    logger.info(f"  ✅ Clicked: Mina prov ({selector})")
+                    mina_prov_clicked = True
+                    break
+            except Exception as e:
+                logger.debug(f"Click failed for {selector}: {e}")
+                continue
         
         if not mina_prov_clicked:
+            # Fallback to clicking the menu-item styled button from the start page
             try:
-                await asyncio.wait_for(
-                    self._click_menu_item(page, ["Mina prov", "Mina Prov", "MINA PROV", "Mina tester"]),
-                    timeout=10
-                )
-                mina_prov_clicked = True
-            except asyncio.TimeoutError:
-                logger.warning("  ⚠️ Timeout clicking Mina prov")
+                menu_item = page.locator('button[title="Mina prov"], .menu-item:has-text("Mina prov")')
+                if await menu_item.count() > 0:
+                    await menu_item.first.click(force=True)
+                    logger.info("  ✅ Clicked: Mina prov (menu-item)")
+                    mina_prov_clicked = True
+            except:
+                pass
+        
+        if not mina_prov_clicked:
+            logger.warning("  ⚠️ Could not click Mina prov")
         
         await asyncio.sleep(2)
         
-        # Close any new overlays that appeared
+        # Close any new overlays or login dialogs that appeared
         await self._close_overlays(page)
+        await self._close_login_dialog(page)
         
         # Take screenshot
         await page.screenshot(path=str(self.data_dir / "after_mina_prov.png"))
@@ -480,30 +722,49 @@ class TrafikverketScraper:
         
         # Fallback to text-based search
         if not omboka_clicked:
-            try:
-                await asyncio.wait_for(
-                    self._click_menu_item(page, ["Omboka", "OMBOKA", "Boka om", "Ändra bokning"]),
-                    timeout=10
-                )
-                omboka_clicked = True
-            except asyncio.TimeoutError:
-                logger.warning("  ⚠️ Timeout clicking Omboka")
+            omboka_selectors = [
+                'button:has-text("Omboka")',
+                'a:has-text("Omboka")',
+                '[class*="reschedule"]',
+            ]
+            for selector in omboka_selectors:
+                try:
+                    btn = page.locator(selector)
+                    if await btn.count() > 0 and await btn.first.is_visible():
+                        await btn.first.click(force=True)
+                        logger.info(f"  ✅ Clicked: Omboka ({selector})")
+                        omboka_clicked = True
+                        break
+                except:
+                    continue
         
         if not omboka_clicked:
             logger.warning("  ⚠️ Could not find Omboka button - trying 'Boka prov' instead")
-            # Try clicking "Boka prov" tab for new booking
-            try:
-                boka_tab = page.locator('[role="tab"]:has-text("Boka prov"), a:has-text("Boka prov"), .menu-item:has-text("Boka prov")')
-                if await boka_tab.count() > 0:
-                    await boka_tab.first.click(force=True)
-                    logger.info("  ✅ Clicked: Boka prov tab")
-                else:
-                    await self._click_menu_item(page, ["Boka prov", "Boka Prov", "BOKA PROV", "Boka nytt prov"])
-            except Exception as e:
-                logger.debug(f"Could not click Boka prov: {e}")
+            # Try clicking "Boka prov" button - use specific IDs first
+            boka_selectors = [
+                '#desktop-booking-button',
+                '#mobile-booking-button',
+                'button[title="Boka prov"]',
+                '.menu-item:has-text("Boka prov")',
+                '[role="tab"]:has-text("Boka prov")',
+                'a:has-text("Boka prov")',
+            ]
+            for selector in boka_selectors:
+                try:
+                    btn = page.locator(selector)
+                    if await btn.count() > 0 and await btn.first.is_visible():
+                        await btn.first.click(force=True)
+                        logger.info(f"  ✅ Clicked: Boka prov ({selector})")
+                        break
+                except Exception as e:
+                    logger.debug(f"Could not click Boka prov {selector}: {e}")
+                    continue
         
         # Wait for the booking page to load
         await asyncio.sleep(3)
+        
+        # Close any login dialogs that might have appeared
+        await self._close_login_dialog(page)
         
         # Take screenshot
         await page.screenshot(path=str(self.data_dir / "after_omboka.png"))
@@ -1107,7 +1368,7 @@ class TrafikverketScraper:
             for selector in input_selectors:
                 try:
                     inputs = page.locator(selector)
-                    count = await inputs.count()
+                    count = await inputs.count();
                     for i in range(count):
                         inp = inputs.nth(i)
                         if await inp.is_visible():
