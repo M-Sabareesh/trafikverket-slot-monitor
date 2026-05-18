@@ -346,16 +346,18 @@ class TrafikverketScraper:
             await page.screenshot(path=str(self.data_dir / "login_check.png"))
             
             # FIRST: Check for NOT logged in indicators (login dialogs, etc.)
-            # These take priority - if we see a login dialog, we're NOT logged in
+            # These take priority - if we see a login dialog overlay, we're NOT logged in
+            # Be specific to avoid matching header menu buttons
             not_logged_in_indicators = [
                 'app-login-dialog',
                 '.login-dialog',
-                '.login-title',
-                'text="Logga in"',
+                'div.dialog-card:has-text("Logga in")',
+                '.overlay-container.show app-login-dialog',
                 'button:has-text("Mobilt BankID")',
-                'text="Personnummer"',
+                'input#social-security-number-input',
                 '[id*="social-security"]',
                 'text="Engångskod"',
+                '.login-title',
             ]
             
             for selector in not_logged_in_indicators:
@@ -368,11 +370,13 @@ class TrafikverketScraper:
                     continue
             
             # Check for login indicators - if we see booking options, we're logged in
+            # Check "Logga ut" FIRST as it's the clearest indicator of being logged in
             logged_in_indicators = [
-                'text="Vad vill du boka?"',
-                'text="Logga ut"',
                 'button:has-text("Logga ut")',
                 'a:has-text("Logga ut")',
+                '#desktop-login-button:has-text("Logga ut")',
+                'text="Logga ut"',
+                'text="Vad vill du boka?"',
                 'select:has-text("Personbil")',
                 '[class*="booking-form"]',
                 '#licence-type-select',
