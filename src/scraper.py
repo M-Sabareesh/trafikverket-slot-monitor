@@ -874,6 +874,64 @@ class TrafikverketScraper:
         logger.warning(f"  ⚠️ Could not find menu item: {text_options[0]}")
         return False
 
+    async def _wait_for_element(self, page: Page, selector: str, timeout: int = 10) -> bool:
+        """Wait for an element to appear on the page."""
+        try:
+            for i in range(timeout):
+                elem = page.locator(selector)
+                if await elem.count() > 0:
+                    logger.info(f"    ✅ Found element: {selector}")
+                    return True
+                await asyncio.sleep(1)
+            logger.warning(f"    ⚠️ Element not found after {timeout}s: {selector}")
+            return False
+        except Exception as e:
+            logger.warning(f"    ⚠️ Error waiting for element {selector}: {e}")
+            return False
+
+    async def _select_dropdown_option(self, page: Page, selector: str, values: List[str], label: str) -> bool:
+        """Try to select an option from a dropdown, trying multiple value formats."""
+        try:
+            select = page.locator(selector)
+            if await select.count() == 0:
+                logger.warning(f"    ⚠️ Could not find {selector}")
+                return False
+            
+            # Try each value format
+            for value in values:
+                try:
+                    await select.select_option(value=value)
+                    logger.info(f"    ✅ Selected: {label} (value={value})")
+                    return True
+                except Exception:
+                    continue
+            
+            # Try selecting by label text
+            try:
+                await select.select_option(label=label)
+                logger.info(f"    ✅ Selected: {label} (by label)")
+                return True
+            except Exception:
+                pass
+            
+            # Try selecting by partial text match
+            try:
+                options = await select.locator('option').all_text_contents()
+                for opt in options:
+                    if label.lower() in opt.lower():
+                        await select.select_option(label=opt)
+                        logger.info(f"    ✅ Selected: {opt} (partial match)")
+                        return True
+            except Exception:
+                pass
+            
+            logger.warning(f"    ⚠️ Could not select option in {selector}")
+            return False
+            
+        except Exception as e:
+            logger.warning(f"    ⚠️ Error selecting {selector}: {e}")
+            return False
+
     async def _select_booking_options(self, page: Page):
         """Select the booking options (license type, exam, location, vehicle)."""
         logger.info("📝 Selecting booking options...")
@@ -892,7 +950,7 @@ class TrafikverketScraper:
         await page.screenshot(path=str(self.data_dir / "before_options.png"))
         
         # Wait for page to fully load
-        await asyncio.sleep(2)
+        await asyncio.sleep(3)
         
         # Save HTML for debugging
         content = await page.content()
@@ -900,59 +958,35 @@ class TrafikverketScraper:
             f.write(content)
         
         # 1. Select "Vad vill du boka?" - B-Personbil
-        # Using exact ID: licence-type-select, value "6: 5" for B - Personbil
         logger.info("  → Step 1: Selecting license type (B-Personbil)")
-        try:
-            select = page.locator('#licence-type-select')
-            if await select.count() > 0:
-                await select.select_option(value="6: 5")
-                logger.info("    ✅ Selected: B - Personbil")
-            else:
-                logger.warning("    ⚠️ Could not find licence-type-select")
-        except Exception as e:
-            logger.warning(f"    ⚠️ Error selecting license type: {e}")
+        await self._select_dropdown_option(page, '#licence-type-select', ['6: 5', '5', 'B'], 'B - Personbil')
         
-        # Wait for page to update after selection
-        await asyncio.sleep(2)
+        # Wait for page to update and next dropdown to load
+        await asyncio.sleep(3)
         
         # 2. Select "Välj prov" - Körprov
-        # Using exact ID: examination-type-select, value "2: 12" for Körprov
         logger.info("  → Step 2: Selecting exam type (Körprov)")
-        try:
-            select = page.locator('#examination-type-select')
-            if await select.count() > 0:
-                await select.select_option(value="2: 12")
-                logger.info("    ✅ Selected: Körprov")
-            else:
-                logger.warning("    ⚠️ Could not find examination-type-select")
-        except Exception as e:
-            logger.warning(f"    ⚠️ Error selecting exam type: {e}")
+        # Wait for the dropdown to appear
+        await self._wait_for_element(page, '#examination-type-select', timeout=10)
+        await self._select_dropdown_option(page, '#examination-type-select', ['2: 12', '12', '2'], 'Körprov')
         
         # Wait for page to update
-        await asyncio.sleep(2)
+        await asyncio.sleep(3)
         
-        # 3. Select location "Välj provort" - Göteborg-Hisingen
-        # Click button with ID: select-location-search, then search and select
-        logger.info("  → Step 3: Selecting location (Göteborg-Hisingen)")
+        # 3. Select location
+        logger.info(f"  → Step 3: Selecting location ({self.config.location})")
         await self._select_location_with_button(page, self.config.location)
         
         # Wait for page to update
-        await asyncio.sleep(2)
+        await asyncio.sleep(3)
         
         # 4. Select vehicle type - Automatbil
-        # Using exact ID: vehicle-select, value "2: 4" for Automatbil
         logger.info("  → Step 4: Selecting vehicle type (Automatbil)")
-        try:
-            select = page.locator('#vehicle-select')
-            if await select.count() > 0:
-                await select.select_option(value="2: 4")
-                logger.info("    ✅ Selected: Automatbil")
-            else:
-                logger.warning("    ⚠️ Could not find vehicle-select")
-        except Exception as e:
-            logger.warning(f"    ⚠️ Error selecting vehicle type: {e}")
+        # Wait for the dropdown to appear
+        await self._wait_for_element(page, '#vehicle-select', timeout=10)
+        await self._select_dropdown_option(page, '#vehicle-select', ['2: 4', '4', '2'], 'Automatbil')
         
-        await asyncio.sleep(1.5)
+        await asyncio.sleep(2)
         
         # Take screenshot after selecting options
         await page.screenshot(path=str(self.data_dir / "after_options.png"))
@@ -961,7 +995,7 @@ class TrafikverketScraper:
         await self._click_search_button(page)
         
         # Wait for results to load
-        await asyncio.sleep(3)
+        await asyncio.sleep(5)
     
     async def _select_location_with_button(self, page: Page, location: str):
         """
@@ -1682,18 +1716,29 @@ class TrafikverketScraper:
         """Click the search/show slots button."""
         logger.info("  → Looking for search button...")
         
+        # First check if results are already loading/loaded (some pages auto-search)
+        if await self._check_if_slots_visible(page):
+            logger.info("    ✅ Results already visible - no search button needed")
+            return True
+        
         search_selectors = [
+            '#search-submit',
+            '#search-button',
             'button:has-text("Sök")',
             'button:has-text("Visa")',
             'button:has-text("Visa lediga")',
+            'button:has-text("Visa tider")',
             'button:has-text("Hitta")',
             'button:has-text("Nästa")',
+            'button:has-text("Search")',
             'input[type="submit"]',
             'button[type="submit"]',
             '[class*="search"] button',
             '[class*="submit"]',
-            'button.btn-primary',
-            'button.primary',
+            'button.btn-primary:not([disabled])',
+            'button.primary:not([disabled])',
+            '.search-form button',
+            'form button[type="submit"]',
         ]
         
         for selector in search_selectors:
@@ -1703,24 +1748,32 @@ class TrafikverketScraper:
                     # Make sure button is visible and enabled
                     if await btn.first.is_visible() and await btn.first.is_enabled():
                         await btn.first.click()
-                        logger.info(f"    ✅ Clicked search button")
+                        logger.info(f"    ✅ Clicked search button: {selector}")
                         return True
             except:
                 continue
         
-        # Fallback: try clicking any visible button
+        # Fallback: try clicking any visible button that looks like a search button
         try:
             buttons = await page.locator('button:visible').all()
             for btn in buttons:
                 text = await btn.text_content()
-                if text and any(word in text.lower() for word in ['sök', 'visa', 'hitta', 'nästa']):
-                    await btn.click()
-                    logger.info(f"    ✅ Clicked button: {text.strip()}")
-                    return True
+                if text and any(word in text.lower() for word in ['sök', 'visa', 'hitta', 'nästa', 'search']):
+                    if await btn.is_enabled():
+                        await btn.click()
+                        logger.info(f"    ✅ Clicked button: {text.strip()}")
+                        return True
         except:
             pass
         
-        logger.warning("    ⚠️ Could not find search button")
+        # Maybe results load automatically - wait and check
+        logger.info("    ⏳ No search button found - waiting for auto-load...")
+        await asyncio.sleep(3)
+        if await self._check_if_slots_visible(page):
+            logger.info("    ✅ Results loaded automatically")
+            return True
+        
+        logger.warning("    ⚠️ Could not find search button and no results visible")
         return False
     
     async def _scrape_slots(self, page: Page) -> List[TestSlot]:
