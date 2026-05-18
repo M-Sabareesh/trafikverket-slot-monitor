@@ -6,9 +6,12 @@ Supports BankID login and form-based slot search.
 """
 
 import asyncio
+import base64
 import json
 import logging
+import os
 import re
+import subprocess
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from pathlib import Path
@@ -270,8 +273,65 @@ class TrafikverketScraper:
             
             await context.storage_state(path=str(self.session_file))
             logger.info(f"💾 Session saved to {self.session_file}")
+            
+            # Auto-update GitHub secret if running in CI environment
+            self._update_github_session_secret()
+            
         except Exception as e:
             logger.warning(f"Could not save session: {e}")
+    
+    def _update_github_session_secret(self):
+        """Update the GitHub SESSION_DATA secret with the current session."""
+        try:
+            # Check if we're in GitHub Actions environment
+            github_actions = os.environ.get('GITHUB_ACTIONS') == 'true'
+            github_token = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN')
+            github_repo = os.environ.get('GITHUB_REPOSITORY')
+            
+            if not github_actions:
+                logger.debug("Not in GitHub Actions - skipping secret update")
+                return
+            
+            if not github_token:
+                logger.warning("⚠️ No GH_TOKEN found - cannot update session secret")
+                return
+            
+            if not github_repo:
+                logger.warning("⚠️ No GITHUB_REPOSITORY found - cannot update session secret")
+                return
+            
+            # Read the session file and encode to base64
+            if not self.session_file.exists():
+                logger.warning("⚠️ Session file not found - cannot update secret")
+                return
+            
+            with open(self.session_file, 'r') as f:
+                session_data = f.read()
+            
+            session_b64 = base64.b64encode(session_data.encode()).decode()
+            
+            # Use gh CLI to update the secret
+            logger.info("🔄 Updating SESSION_DATA secret in GitHub...")
+            
+            result = subprocess.run(
+                ['gh', 'secret', 'set', 'SESSION_DATA', '--repo', github_repo],
+                input=session_b64,
+                capture_output=True,
+                text=True,
+                timeout=30
+            )
+            
+            if result.returncode == 0:
+                logger.info("✅ SESSION_DATA secret updated successfully!")
+            else:
+                logger.warning(f"⚠️ Failed to update secret: {result.stderr}")
+                
+        except FileNotFoundError:
+            logger.debug("gh CLI not found - skipping secret update")
+        except subprocess.TimeoutExpired:
+            logger.warning("⚠️ Timeout updating GitHub secret")
+        except Exception as e:
+            logger.warning(f"⚠️ Could not update GitHub secret: {e}")
     
     async def _check_login_status(self, page: Page) -> bool:
         """Check if user is already logged in."""
