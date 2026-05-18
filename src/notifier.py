@@ -357,3 +357,140 @@ Trafikverket Slot Monitor
         except Exception as e:
             logger.error(f"❌ Discord failed: {e}")
             return False
+
+    def notify_no_slots(self, before_date: str = None) -> bool:
+        """Send notification that no slots are available."""
+        from datetime import datetime
+        
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+        date_filter_text = f" before {before_date}" if before_date else ""
+        
+        subject = f"😔 Trafikverket Monitor: No slots available{date_filter_text}"
+        
+        plain_message = f"""
+😔 NO SLOTS AVAILABLE
+
+Checked at: {current_time}
+Location: {self.config.location}
+Filter: Slots{date_filter_text}
+
+No available driving test slots were found matching your criteria.
+
+The monitor will continue checking every 10 minutes and notify you
+when new slots become available.
+
+---
+🔗 Manual check: https://fp.trafikverket.se/Boka/
+Trafikverket Slot Monitor
+"""
+        
+        html_message = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1f2937; }}
+        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+        .status-box {{ background: linear-gradient(135deg, #fef3c7, #fef9c3); border: 2px solid #f59e0b; border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: center; }}
+        h1 {{ color: #92400e; margin: 0 0 10px 0; font-size: 24px; }}
+        .info {{ background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin: 16px 0; }}
+        .info-row {{ display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e5e7eb; }}
+        .info-row:last-child {{ border-bottom: none; }}
+        .label {{ color: #6b7280; }}
+        .value {{ font-weight: 600; color: #1f2937; }}
+        .note {{ background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-top: 20px; }}
+        .note p {{ margin: 0; color: #1e40af; font-size: 14px; }}
+        .btn {{ 
+            display: inline-block; 
+            background: #2563eb; 
+            color: white !important; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 500;
+            margin-top: 16px;
+        }}
+        .footer {{ color: #6b7280; font-size: 12px; margin-top: 32px; padding-top: 16px; border-top: 1px solid #e5e7eb; text-align: center; }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-box">
+            <h1>😔 No Slots Available</h1>
+            <p style="margin: 0; color: #92400e;">No driving test slots found matching your criteria.</p>
+        </div>
+        
+        <div class="info">
+            <div class="info-row">
+                <span class="label">⏰ Checked at</span>
+                <span class="value">{current_time}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">📍 Location</span>
+                <span class="value">{self.config.location}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">📅 Date filter</span>
+                <span class="value">Before {before_date if before_date else 'Any'}</span>
+            </div>
+        </div>
+        
+        <div class="note">
+            <p>🔄 The monitor will continue checking every 10 minutes and notify you immediately when new slots become available.</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="https://fp.trafikverket.se/Boka/" class="btn" target="_blank">
+                🔍 Check Manually
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Trafikverket Slot Monitor</p>
+        </div>
+    </div>
+</body>
+</html>
+"""
+        
+        success = False
+        
+        # Email notification
+        if self.config.smtp_username and self.config.notification_email:
+            if self._send_no_slots_email(subject, plain_message, html_message):
+                success = True
+        
+        # Telegram notification
+        if self.config.telegram_bot_token and self.config.telegram_chat_id:
+            if self._send_telegram(plain_message):
+                success = True
+        
+        # Discord notification  
+        if self.config.discord_webhook_url:
+            if self._send_discord(plain_message):
+                success = True
+        
+        return success
+    
+    def _send_no_slots_email(self, subject: str, plain: str, html: str) -> bool:
+        """Send no slots available email notification."""
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["From"] = self.config.smtp_username
+            msg["To"] = self.config.notification_email
+            msg["Subject"] = subject
+
+            msg.attach(MIMEText(plain, "plain", "utf-8"))
+            msg.attach(MIMEText(html, "html", "utf-8"))
+            
+            with smtplib.SMTP(self.config.smtp_server, self.config.smtp_port) as server:
+                server.starttls()
+                server.login(self.config.smtp_username, self.config.smtp_password)
+                server.send_message(msg)
+            
+            logger.info(f"✅ No slots email sent to {self.config.notification_email}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ No slots email failed: {e}")
+            return False

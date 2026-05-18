@@ -6434,3 +6434,2949 @@ INFO:__main__:📅 1 slots before 2026-06-11 (filtered from 227)
 INFO:notifier:✅ Email sent to sabareesh.madambath@gmail.com
 INFO:__main__:📧 Email sent with 1 slots
 INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:📝 Configuration:
+INFO:__main__:   Location: Göteborg-Hisingen
+INFO:__main__:   Exam Type: Körprov
+INFO:__main__:   Notification Email: sabareesh.madambath@gmail.com
+INFO:__main__:   Notify Before Date: 2026-06-20
+INFO:__main__:🔄 Starting continuous monitoring (interval: 60s)
+INFO:__main__:📅 Only notifying for slots before: 2026-06-20
+INFO:__main__:   Press Ctrl+C to stop
+INFO:__main__:🔍 Run #1 - 2026-05-18 08:54:46
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #2 - 2026-05-18 08:58:03
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #3 - 2026-05-18 09:01:18
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #4 - 2026-05-18 09:04:34
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #5 - 2026-05-18 09:35:28
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #6 - 2026-05-18 09:38:43
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #7 - 2026-05-18 09:41:57
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #8 - 2026-05-18 10:29:42
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #9 - 2026-05-18 10:32:56
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #10 - 2026-05-18 10:36:11
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #11 - 2026-05-18 10:39:25
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #12 - 2026-05-18 10:42:39
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #13 - 2026-05-18 10:46:18
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #14 - 2026-05-18 10:49:34
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #15 - 2026-05-18 10:52:49
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #16 - 2026-05-18 10:56:05
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #17 - 2026-05-18 10:59:20
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #18 - 2026-05-18 11:02:34
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #19 - 2026-05-18 11:05:50
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #20 - 2026-05-18 11:09:04
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #21 - 2026-05-18 11:13:30
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #22 - 2026-05-18 11:16:45
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #23 - 2026-05-18 11:19:59
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #24 - 2026-05-18 11:23:12
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #25 - 2026-05-18 11:26:27
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #26 - 2026-05-18 11:29:41
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #27 - 2026-05-18 11:32:55
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #28 - 2026-05-18 11:36:10
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #29 - 2026-05-18 12:41:25
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #30 - 2026-05-18 12:44:39
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #31 - 2026-05-18 12:47:53
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #32 - 2026-05-18 12:51:07
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #33 - 2026-05-18 12:54:21
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #34 - 2026-05-18 12:57:36
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #35 - 2026-05-18 13:00:49
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #36 - 2026-05-18 13:04:04
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #37 - 2026-05-18 13:07:18
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #38 - 2026-05-18 13:10:32
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #39 - 2026-05-18 13:13:46
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #40 - 2026-05-18 13:17:00
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #41 - 2026-05-18 13:20:14
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #42 - 2026-05-18 13:23:28
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #43 - 2026-05-18 13:26:42
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #44 - 2026-05-18 13:29:56
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #45 - 2026-05-18 13:33:11
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #46 - 2026-05-18 13:36:25
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #47 - 2026-05-18 13:39:39
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #48 - 2026-05-18 13:55:00
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:05:27.052597
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 13:55:27.052184
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:25:27.052447
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+WARNING:scraper:    ⚠️ Could not find examination-type-select
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+WARNING:scraper:    ⚠️ Could not find vehicle-select
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:📭 No slots found
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:06:16.775846
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 13:55:47.636483
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:26:16.775605
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 0 total available slots
+INFO:__main__:📭 No slots before 2026-06-20 - skipping email
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #49 - 2026-05-18 13:57:34
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:08:05.861381
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 13:58:05.861145
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:28:05.861310
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 216 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:08:59.421310
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 13:58:40.243316
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:28:59.421099
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 216 total available slots
+INFO:__main__:🎉 216 NEW slots found!
+INFO:__main__:📅 15 slots before 2026-06-20 (filtered from 216)
+ERROR:notifier:❌ Email failed: [Errno 101] Network is unreachable
+WARNING:notifier:⚠️ No notification channels configured or all failed
+INFO:notifier:Slots found:
+🚗 New available driving test slots!
+========================================
+
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 10:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 08:00
+------------------------------
+
+🔗 Book here: https://fp.trafikverket.se/Boka/
+
+⚡ Hurry! Slots fill up quickly!
+INFO:__main__:📧 Email sent with 15 slots
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #50 - 2026-05-18 14:02:28
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:12:52.886324
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:02:52.885931
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:32:52.886222
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 216 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:13:45.096817
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:03:26.509301
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:33:45.096079
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 216 total available slots
+INFO:__main__:🎉 27 NEW slots found!
+INFO:__main__:📅 16 slots before 2026-06-20 (filtered from 216)
+ERROR:notifier:❌ Email failed: [Errno 101] Network is unreachable
+WARNING:notifier:⚠️ No notification channels configured or all failed
+INFO:notifier:Slots found:
+🚗 New available driving test slots!
+========================================
+
+📍 Location: Göteborg-Hisingen
+📅 Date: fredag 12 jun 2026
+🕐 Time: 13:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 10:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 08:00
+------------------------------
+
+🔗 Book here: https://fp.trafikverket.se/Boka/
+
+⚡ Hurry! Slots fill up quickly!
+INFO:__main__:📧 Email sent with 16 slots
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #51 - 2026-05-18 14:07:12
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:17:37.811320
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:07:37.811045
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:37:37.811218
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 216 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:18:29.470443
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:08:11.428406
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:38:29.470051
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 216 total available slots
+INFO:__main__:📅 16 slots before 2026-06-20 (filtered from 216)
+ERROR:notifier:❌ Email failed: [Errno 101] Network is unreachable
+WARNING:notifier:⚠️ No notification channels configured or all failed
+INFO:notifier:Slots found:
+🚗 New available driving test slots!
+========================================
+
+📍 Location: Göteborg-Hisingen
+📅 Date: fredag 12 jun 2026
+🕐 Time: 13:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 10:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 08:00
+------------------------------
+
+🔗 Book here: https://fp.trafikverket.se/Boka/
+
+⚡ Hurry! Slots fill up quickly!
+INFO:__main__:📧 Email sent with 16 slots
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #52 - 2026-05-18 14:11:56
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:22:18.156805
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:12:18.156551
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:42:18.156744
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+WARNING:scraper:    ⚠️ Could not find examination-type-select
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+WARNING:scraper:    ⚠️ Could not find vehicle-select
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:📭 No slots found
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:23:09.512914
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:12:39.003107
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:43:09.512676
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 0 total available slots
+INFO:__main__:📭 No slots before 2026-06-20 - skipping email
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #53 - 2026-05-18 14:14:26
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:24:51.895149
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:14:51.894910
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:44:51.895089
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 215 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (215 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 08 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (215 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 08 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:25:41.145265
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:15:27.099040
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:45:41.144961
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 215 total available slots
+INFO:__main__:🎉 215 NEW slots found!
+INFO:__main__:📅 17 slots before 2026-06-20 (filtered from 215)
+ERROR:notifier:❌ Email failed: [Errno 101] Network is unreachable
+WARNING:notifier:⚠️ No notification channels configured or all failed
+INFO:notifier:Slots found:
+🚗 New available driving test slots!
+========================================
+
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 08 jun 2026
+🕐 Time: 16:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: fredag 12 jun 2026
+🕐 Time: 13:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 10:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 08:00
+------------------------------
+
+🔗 Book here: https://fp.trafikverket.se/Boka/
+
+⚡ Hurry! Slots fill up quickly!
+INFO:__main__:📧 Email sent with 17 slots
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #54 - 2026-05-18 14:19:09
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:29:32.898412
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:19:32.898115
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:49:32.898324
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 215 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (215 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 08 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (215 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 08 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:30:25.531628
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:20:07.075429
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:50:24.531487
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 215 total available slots
+INFO:__main__:📅 17 slots before 2026-06-20 (filtered from 215)
+ERROR:notifier:❌ Email failed: [Errno 101] Network is unreachable
+WARNING:notifier:⚠️ No notification channels configured or all failed
+INFO:notifier:Slots found:
+🚗 New available driving test slots!
+========================================
+
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 08 jun 2026
+🕐 Time: 16:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: fredag 12 jun 2026
+🕐 Time: 13:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 10:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 08:00
+------------------------------
+
+🔗 Book here: https://fp.trafikverket.se/Boka/
+
+⚡ Hurry! Slots fill up quickly!
+INFO:__main__:📧 Email sent with 17 slots
+INFO:__main__:💤 Sleeping for 60 seconds...
+INFO:__main__:🔍 Run #55 - 2026-05-18 14:23:53
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found logged-in indicator: text="Logga ut"
+INFO:scraper:✅ Logged in successfully!
+INFO:scraper:⏳ Waiting for all cookies to be set...
+INFO:scraper:🔄 Navigating to capture all session cookies...
+INFO:scraper:💾 Saving session...
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:34:19.383008
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:24:18.382539
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:54:18.382766
+INFO:scraper:💾 Session saved to data/session.json
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:📍 Navigating to reschedule page...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Mina prov tab...
+INFO:scraper:  ✅ Clicked: Mina prov tab
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  → Looking for Omboka button...
+INFO:scraper:  ✅ Clicked outside overlay to close
+INFO:scraper:  ✅ Clicked: Omboka (via ID)
+INFO:scraper:  ✅ Found booking form element: #licence-type-select
+INFO:scraper:✅ Navigated to booking page
+INFO:scraper:📝 Selecting booking options...
+INFO:scraper:  → Step 1: Selecting license type (B-Personbil)
+INFO:scraper:    ✅ Selected: B - Personbil
+INFO:scraper:  → Step 2: Selecting exam type (Körprov)
+INFO:scraper:    ✅ Selected: Körprov
+INFO:scraper:  → Step 3: Selecting location (Göteborg-Hisingen)
+INFO:scraper:    Clicked: Välj provort button
+INFO:scraper:    Typed: Göteborg-Hisingen
+INFO:scraper:    ✅ Selected location: Göteborg-Hisingen
+INFO:scraper:    ✅ Clicked Bekräfta
+INFO:scraper:  → Step 4: Selecting vehicle type (Automatbil)
+INFO:scraper:    ✅ Selected: Automatbil
+INFO:scraper:  → Looking for search button...
+WARNING:scraper:    ⚠️ Could not find search button
+INFO:scraper:🔍 Scraping available slots...
+INFO:scraper:Trying fallback HTML parsing...
+INFO:scraper:✅ Parsed 216 slots using BeautifulSoup
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 08 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:
+============================================================
+INFO:scraper:📋 AVAILABLE SLOTS (216 total)
+INFO:scraper:============================================================
+INFO:scraper:
+📅 Måndag 08 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 03 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 11:00, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 12 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 17 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 24 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 26 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Fredag 31 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 06 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 13 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 12:45, 13:30, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 15 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 20 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 22 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 27 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Måndag 29 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 13:30, 14:30, 15:15, 16:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 01 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 08 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 08:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 15 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 17 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 24 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Onsdag 29 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 09:45, 10:30, 11:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 14 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 11:15, 12:45, 13:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 16 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 10:30, 12:45, 14:30, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 21 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Tisdag 30 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 08:00, 15:15
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 16 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 08:00, 08:45, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 25 jun 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 10:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+📅 Torsdag 30 jul 2026
+INFO:scraper:   Location: Göteborg-Hisingen
+INFO:scraper:   Times: 07:15, 12:45, 13:30, 14:30
+INFO:scraper:   Exam: Körprov B | Price: 1 800 kr
+INFO:scraper:
+============================================================
+
+INFO:scraper:💾 Saving session with 6 cookies:
+INFO:scraper:   ✅ FpsPartnerDeviceIdentifier: expires 2027-05-13 14:55:59.873458
+INFO:scraper:   ⚠️  ASP.NET_SessionId: session cookie
+INFO:scraper:   ✅ TrvCookieConsent: expires 2027-05-13 14:56:04.288381
+INFO:scraper:   ✅ NSC_mc-gpsbsqspw-fyu-xfc-iuuq-wt: expires 2026-05-18 14:35:11.342523
+INFO:scraper:   ✅ LoginValid: expires 2026-06-18 14:24:53.506826
+INFO:scraper:   ✅ FpsExternalIdentity: expires 2026-05-18 14:55:10.342017
+INFO:scraper:💾 Session saved to data/session.json
+INFO:__main__:📋 Found 216 total available slots
+INFO:__main__:🎉 123 NEW slots found!
+INFO:__main__:📅 17 slots before 2026-06-20 (filtered from 216)
+ERROR:notifier:❌ Email failed: [Errno 101] Network is unreachable
+WARNING:notifier:⚠️ No notification channels configured or all failed
+INFO:notifier:Slots found:
+🚗 New available driving test slots!
+========================================
+
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 08 jun 2026
+🕐 Time: 16:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: fredag 12 jun 2026
+🕐 Time: 13:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: måndag 15 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 08:00
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 10:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 12:45
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 14:30
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: tisdag 16 jun 2026
+🕐 Time: 15:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 07:15
+------------------------------
+📍 Location: Göteborg-Hisingen
+📅 Date: onsdag 17 jun 2026
+🕐 Time: 08:00
+------------------------------
+
+🔗 Book here: https://fp.trafikverket.se/Boka/
+
+⚡ Hurry! Slots fill up quickly!
+INFO:__main__:📧 Email sent with 17 slots
+INFO:__main__:💤 Sleeping for 60 seconds...

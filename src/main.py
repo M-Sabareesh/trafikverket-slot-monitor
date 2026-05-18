@@ -240,19 +240,28 @@ async def main():
     print()
     logger.info(f"📋 Found {len(current_slots)} total available slots")
     
+    # Get before_date filter
+    before_date = args.before_date if args.before_date else config.notify_before_date
+    
+    # Filter slots by date if specified
+    filtered_slots = current_slots
+    if before_date and current_slots:
+        filtered_slots = filter_slots_before_date(current_slots, before_date)
+        logger.info(f"📅 After filtering (before {before_date}): {len(filtered_slots)} slots")
+    
     # Display all found slots
-    if current_slots:
+    if filtered_slots:
         print()
         print("=" * 60)
-        print("📅 AVAILABLE SLOTS")
+        print(f"📅 AVAILABLE SLOTS (before {before_date})" if before_date else "📅 AVAILABLE SLOTS")
         print("=" * 60)
-        for slot in current_slots:
+        for slot in filtered_slots:
             print(f"  {slot.date}, {slot.time}{slot.location}")
             print(f"  {slot.exam_type}{slot.price}")
             print()
     
-    # Find new slots
-    new_slots = scraper.find_new_slots(current_slots, previous_slots)
+    # Find new slots (from filtered list)
+    new_slots = scraper.find_new_slots(filtered_slots, previous_slots)
     
     if new_slots:
         print()
@@ -268,14 +277,22 @@ async def main():
     # Save current slots for next run
     scraper.save_slots(current_slots)
     
+    # Initialize notifier
+    notifier = Notifier(config)
+    
     # Send notifications
-    if (new_slots or args.force_notify or args.always_notify) and not args.dry_run:
-        notifier = Notifier(config)
-        # If always-notify, send all slots; otherwise send new slots only
-        slots_to_notify = current_slots if args.always_notify else (new_slots if new_slots else current_slots[:1])
-        if slots_to_notify:
-            notifier.notify(slots_to_notify)
-    elif new_slots and args.dry_run:
+    if not args.dry_run:
+        if filtered_slots:
+            # We have slots - send notification about available slots
+            if new_slots or args.force_notify or args.always_notify:
+                slots_to_notify = filtered_slots if args.always_notify else (new_slots if new_slots else filtered_slots[:1])
+                if slots_to_notify:
+                    notifier.notify(slots_to_notify)
+        else:
+            # No slots available - send "no slots" notification
+            logger.info("📧 Sending 'no slots available' notification...")
+            notifier.notify_no_slots(before_date)
+    elif args.dry_run:
         logger.info("🔕 Dry run mode - notifications skipped")
     
     print()
@@ -285,7 +302,7 @@ async def main():
     print()
     
     # Return exit code (0 = slots found, 1 = no slots)
-    return 0 if current_slots else 1
+    return 0 if filtered_slots else 1
 
 
 async def run_loop(args, config):

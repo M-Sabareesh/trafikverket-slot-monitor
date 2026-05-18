@@ -2,8 +2,8 @@ name: Monitor Trafikverket Slots
 
 on:
   schedule:
-    # Run every 5 minutes, 24/7
-    - cron: '*/5 * * * *'
+    # Run every 10 minutes
+    - cron: '*/10 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
@@ -68,8 +68,8 @@ jobs:
           BOOKING_URL: ${{ secrets.BOOKING_URL }}
           LOCATION: ${{ secrets.LOCATION }}
           LOCATIONS: ${{ secrets.LOCATIONS }}
-          CHECK_BEFORE_DATE: ${{ secrets.CHECK_BEFORE_DATE }}
-          NOTIFY_BEFORE_DATE: ${{ secrets.NOTIFY_BEFORE_DATE }}
+          CHECK_BEFORE_DATE: "2026-06-13"
+          NOTIFY_BEFORE_DATE: "2026-06-13"
           NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -79,7 +79,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          python src/main.py --debug --always-notify || true
+          python src/main.py --debug --always-notify --before-date 2026-06-13 || true
       
       - name: Upload debug artifacts
         if: always()
