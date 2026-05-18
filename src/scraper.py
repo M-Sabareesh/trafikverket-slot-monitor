@@ -1756,22 +1756,6 @@ class TrafikverketScraper:
             logger.warning(f"    ⚠️ Error with searchable dropdown: {e}")
             return False
     
-    async def _select_dropdown_option(
-        self, 
-        page: Page, 
-        label_text: str, 
-        option_text: str,
-        fallback_patterns: List[str] = None
-    ):
-        """Legacy method - kept for compatibility."""
-        return await self._select_dropdown_by_index_or_label(
-            page,
-            index=-1,
-            label_contains=label_text,
-            option_contains=[option_text] + (fallback_patterns or []),
-            description=f"{label_text} ({option_text})"
-        )
-    
     async def _click_search_button(self, page: Page):
         """Click the search/show slots button."""
         logger.info("  → Looking for search button...")
