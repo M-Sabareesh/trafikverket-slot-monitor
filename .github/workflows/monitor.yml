@@ -2,11 +2,15 @@ name: Monitor Trafikverket Slots
 
 on:
   schedule:
-    # Run every 5 minutes
+    # Run every 5 minutes (note: GitHub Actions may delay scheduled runs)
     - cron: '*/5 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
+  
+  # Allow external trigger via repository_dispatch
+  repository_dispatch:
+    types: [trigger-monitor]
   
   # Run on push to main for testing
   push:

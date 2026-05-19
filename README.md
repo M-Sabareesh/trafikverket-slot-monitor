@@ -128,6 +128,35 @@ trafikverket-slot-monitor/
 3. **Don't share your booking URL** - it contains personal information
 4. **Respect rate limits** - don't run too frequently
 
+## ⏰ Scheduling Reliability
+
+**Note:** GitHub Actions scheduled workflows are NOT guaranteed to run on time. During periods of high load, scheduled workflows may be delayed by minutes or even hours. The runs you see may be hours apart instead of every 5 minutes.
+
+### Options for More Reliable Scheduling
+
+#### Option 1: Run Locally (Most Reliable)
+```bash
+# Run continuously with 60-second intervals
+python src/main.py --loop --always-notify
+```
+
+#### Option 2: Use External Trigger Service
+Use a service like [cron-job.org](https://cron-job.org) to trigger the workflow via the GitHub API:
+
+1. Create a GitHub Personal Access Token with `repo` scope
+2. Set up a cron job to call:
+   ```bash
+   curl -X POST \
+     -H "Authorization: token YOUR_GH_PAT" \
+     -H "Accept: application/vnd.github.v3+json" \
+     https://api.github.com/repos/YOUR_USER/trafikverket-slot-monitor/dispatches \
+     -d '{"event_type":"trigger-monitor"}'
+   ```
+3. Schedule it to run every 5 minutes
+
+#### Option 3: Use a VPS or Raspberry Pi
+Run the monitor on a cheap VPS or Raspberry Pi with a local crontab for guaranteed timing.
+
 ## 📄 License
 
 This project is licensed under the MIT License.
