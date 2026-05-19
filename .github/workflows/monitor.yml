@@ -1,23 +1,12 @@
 name: Monitor Trafikverket Slots
 
 on:
-  schedule:
-    # Run every 5 minutes (note: GitHub Actions may delay scheduled runs)
-    - cron: '*/5 * * * *'
-  
   # Allow manual trigger
   workflow_dispatch:
   
-  # Allow external trigger via repository_dispatch
+  # Allow external trigger via repository_dispatch (used by cron-job.org)
   repository_dispatch:
     types: [trigger-monitor]
-  
-  # Run on push to main for testing
-  push:
-    branches: [main]
-    paths:
-      - 'src/**'
-      - 'requirements.txt'
 
 # Prevent concurrent runs - cancel in-progress if new one starts
 concurrency:
