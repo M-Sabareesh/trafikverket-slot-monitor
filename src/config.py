@@ -1,9 +1,13 @@
 import os
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import List, Optional
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# Get project root directory (parent of src/)
+PROJECT_ROOT = Path(__file__).parent.parent
 
 
 @dataclass
@@ -28,7 +32,7 @@ class Config:
     headless: bool = True
     
     # Session file for cookies
-    session_file: str = "data/session.json"
+    session_file: str = ""
     
     # Notification settings
     notification_email: str = ""
@@ -44,10 +48,14 @@ class Config:
     # Discord (optional)
     discord_webhook_url: str = ""
     
-    # Storage
-    data_dir: str = "data"
+    # Storage - use absolute paths relative to project root
+    data_dir: str = ""
     
     def __post_init__(self):
+        # Set data paths to absolute paths relative to project root
+        self.data_dir = str(PROJECT_ROOT / "data")
+        self.session_file = str(PROJECT_ROOT / "data" / "session.json")
+        
         self.booking_url = os.getenv(
             "BOOKING_URL", 
             "https://fp.trafikverket.se/Boka/"
