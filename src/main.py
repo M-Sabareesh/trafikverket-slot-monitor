@@ -280,7 +280,7 @@ async def main():
     # Initialize notifier
     notifier = Notifier(config)
     
-    # Send notifications
+    # Send notifications only when slots are available
     if not args.dry_run:
         if filtered_slots:
             # We have slots - send notification about available slots
@@ -289,9 +289,8 @@ async def main():
                 if slots_to_notify:
                     notifier.notify(slots_to_notify)
         else:
-            # No slots available - send "no slots" notification
-            logger.info("📧 Sending 'no slots available' notification...")
-            notifier.notify_no_slots(before_date)
+            # No slots available - just log it, don't send email
+            logger.info("� No slots available - no notification sent")
     elif args.dry_run:
         logger.info("🔕 Dry run mode - notifications skipped")
     
