@@ -67,8 +67,8 @@ class TrafikverketScraper:
         self.session_expired = False  # Track if session has expired
     
     async def get_available_slots(self) -> List[TestSlot]:
-        """Fetch all available slots from the booking portal."""
-        slots = []
+        """Fetch all available slots from the booking portal for all configured locations."""
+        all_slots = []
         
         async with async_playwright() as p:
             # Launch browser (non-headless for BankID login)
@@ -93,7 +93,7 @@ class TrafikverketScraper:
                         logger.error("❌ Session expired! Login required.")
                         self.session_expired = True
                         await page.screenshot(path=str(self.data_dir / "session_expired.png"))
-                        return slots
+                        return all_slots
                     
                     # In interactive mode, try to login
                     logger.info("🔐 Not logged in. Starting BankID login flow...")
@@ -104,7 +104,7 @@ class TrafikverketScraper:
                         self.session_expired = True
                         # Take screenshot to see what happened
                         await page.screenshot(path=str(self.data_dir / "login_failed.png"))
-                        return slots
+                        return all_slots
                 
                 # Reset session expired flag on successful login
                 self.session_expired = False
@@ -134,7 +134,7 @@ class TrafikverketScraper:
                     logger.error("❌ Session lost after navigation!")
                     self.session_expired = True
                     await page.screenshot(path=str(self.data_dir / "session_lost.png"))
-                    return slots
+                    return all_slots
                 
                 # Save session after navigation
                 logger.info("💾 Saving session...")
@@ -149,20 +149,51 @@ class TrafikverketScraper:
                 # Log current URL
                 logger.info(f"📍 Current URL: {page.url}")
                 
-                # Navigate to booking and select options
-                await self._navigate_to_search(page)
+                # Get list of locations to search
+                search_locations = self.config.search_locations
+                if not search_locations:
+                    search_locations = [self.config.location] if self.config.location else []
                 
-                # Take screenshot after navigation
-                await page.screenshot(path=str(self.data_dir / "after_navigation.png"))
+                logger.info(f"📍 Will search {len(search_locations)} location(s): {', '.join(search_locations)}")
                 
-                # Select booking options
-                await self._select_booking_options(page)
-                
-                # Search and get slots
-                slots = await self._scrape_slots(page)
+                # Search each location
+                for idx, location in enumerate(search_locations):
+                    logger.info(f"\n{'='*50}")
+                    logger.info(f"🔍 Searching location {idx+1}/{len(search_locations)}: {location}")
+                    logger.info(f"{'='*50}")
+                    
+                    # Navigate to search page for each location (to reset form)
+                    if idx > 0:
+                        # For subsequent locations, navigate back to search to reset
+                        await page.goto(self.BASE_URL + "#/search", wait_until='networkidle', timeout=30000)
+                        await asyncio.sleep(2)
+                        await self._close_overlays(page)
+                    
+                    # Navigate to booking and select options
+                    await self._navigate_to_search(page)
+                    
+                    # Take screenshot after navigation
+                    await page.screenshot(path=str(self.data_dir / f"after_navigation_{location.replace(' ', '_')}.png"))
+                    
+                    # Select booking options for this location
+                    await self._select_booking_options_for_location(page, location)
+                    
+                    # Search and get slots for this location
+                    location_slots = await self._scrape_slots(page)
+                    
+                    logger.info(f"📋 Found {len(location_slots)} slots at {location}")
+                    all_slots.extend(location_slots)
+                    
+                    # Short delay between locations
+                    if idx < len(search_locations) - 1:
+                        await asyncio.sleep(2)
                 
                 # Save session again after successful scraping
                 await self._save_session(context)
+                
+                # Remove duplicates (in case same slot appears in multiple searches)
+                all_slots = list({slot.slot_id: slot for slot in all_slots}.values())
+                logger.info(f"\n📊 Total unique slots found across all locations: {len(all_slots)}")
                 
             except Exception as e:
                 logger.error(f"❌ Error: {e}")
@@ -176,7 +207,7 @@ class TrafikverketScraper:
             finally:
                 await browser.close()
         
-        return slots
+        return all_slots
     
     async def _get_or_create_context(self, browser: Browser) -> BrowserContext:
         """Load existing session or create new context."""
@@ -1084,7 +1115,72 @@ class TrafikverketScraper:
         
         # Wait for results to load
         await asyncio.sleep(5)
-    
+
+    async def _select_booking_options_for_location(self, page: Page, location: str):
+        """Select the booking options for a specific location."""
+        logger.info(f"📝 Selecting booking options for location: {location}")
+        
+        # Skip form filling if flag is set or slots are already visible
+        if self.skip_form:
+            logger.info("  ⏭️ Skipping form selection (--skip-form enabled)")
+            return
+        
+        # First check if slots are already visible (skip form filling if so)
+        if await self._check_if_slots_visible(page):
+            logger.info("  ✅ Slots already visible - skipping form selection")
+            return
+        
+        # Take screenshot before selecting options
+        await page.screenshot(path=str(self.data_dir / f"before_options_{location.replace(' ', '_')}.png"))
+        
+        # Wait for page to fully load
+        await asyncio.sleep(3)
+        
+        # Save HTML for debugging
+        content = await page.content()
+        with open(self.data_dir / f"booking_page_{location.replace(' ', '_')}.html", "w", encoding="utf-8") as f:
+            f.write(content)
+        
+        # 1. Select "Vad vill du boka?" - B-Personbil
+        logger.info("  → Step 1: Selecting license type (B-Personbil)")
+        await self._select_dropdown_option(page, '#licence-type-select', ['6: 5', '5', 'B'], 'B - Personbil')
+        
+        # Wait for page to update and next dropdown to load
+        await asyncio.sleep(3)
+        
+        # 2. Select "Välj prov" - Körprov
+        logger.info("  → Step 2: Selecting exam type (Körprov)")
+        # Wait for the dropdown to appear
+        await self._wait_for_element(page, '#examination-type-select', timeout=10)
+        await self._select_dropdown_option(page, '#examination-type-select', ['2: 12', '12', '2'], 'Körprov')
+        
+        # Wait for page to update
+        await asyncio.sleep(3)
+        
+        # 3. Select location (use the provided location parameter)
+        logger.info(f"  → Step 3: Selecting location ({location})")
+        await self._select_location_with_button(page, location)
+        
+        # Wait for page to update
+        await asyncio.sleep(3)
+        
+        # 4. Select vehicle type - Automatbil
+        logger.info("  → Step 4: Selecting vehicle type (Automatbil)")
+        # Wait for the dropdown to appear
+        await self._wait_for_element(page, '#vehicle-select', timeout=10)
+        await self._select_dropdown_option(page, '#vehicle-select', ['2: 4', '4', '2'], 'Automatbil')
+        
+        await asyncio.sleep(2)
+        
+        # Take screenshot after selecting options
+        await page.screenshot(path=str(self.data_dir / f"after_options_{location.replace(' ', '_')}.png"))
+        
+        # Click search/show button
+        await self._click_search_button(page)
+        
+        # Wait for results to load
+        await asyncio.sleep(5)
+
     async def _select_location_with_button(self, page: Page, location: str):
         """
         Handle the location selector:

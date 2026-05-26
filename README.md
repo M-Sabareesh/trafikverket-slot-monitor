@@ -4,7 +4,7 @@ Automatically monitors [Trafikverket's booking portal](https://fp.trafikverket.s
 
 ## ✨ Features
 
-- 🔍 Monitors specific locations for available slots
+- 🔍 Monitors **multiple locations** simultaneously for available slots
 - 📅 Filter by date (only show slots before a certain date)
 - 📧 Email notifications (Gmail, Outlook, etc.)
 - 📱 Telegram notifications
@@ -53,7 +53,7 @@ python src/main.py
 | Secret | Description | Required |
 |--------|-------------|----------|
 | `BOOKING_URL` | Your Trafikverket booking URL | ✅ |
-| `LOCATIONS` | Comma-separated locations (e.g., `Göteborg,Mölndal`) | ✅ |
+| `LOCATIONS` | Comma-separated locations to search (e.g., `Göteborg-Hisingen,Göteborg Öst`) | ✅ |
 | `CHECK_BEFORE_DATE` | Only show slots before this date (YYYY-MM-DD) | ❌ |
 | `NOTIFICATION_EMAIL` | Email to receive notifications | ❌ |
 | `SMTP_SERVER` | SMTP server (default: smtp.gmail.com) | ❌ |
@@ -63,6 +63,20 @@ python src/main.py
 | `TELEGRAM_BOT_TOKEN` | Telegram bot token | ❌ |
 | `TELEGRAM_CHAT_ID` | Your Telegram chat ID | ❌ |
 | `DISCORD_WEBHOOK_URL` | Discord webhook URL | ❌ |
+
+### Multi-Location Monitoring
+
+The monitor can search **multiple locations** in a single run. Configure this using the `LOCATIONS` environment variable:
+
+```bash
+# In your .env file
+LOCATIONS=Göteborg-Hisingen,Göteborg Öst
+
+# Or via command line
+LOCATIONS="Göteborg-Hisingen,Göteborg Öst" python src/main.py
+```
+
+Each location is searched separately, and results are combined (duplicates removed). This is useful when you're flexible about which test center you can go to.
 
 4. The workflow runs automatically every 2 hours during daytime (Stockholm time)
 

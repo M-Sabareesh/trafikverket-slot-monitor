@@ -18,8 +18,11 @@ class Config:
     # Booking options
     license_type: str = ""  # "B" for B-Personbil
     exam_type: str = ""     # "Körprov" or "Kunskapsprov"
-    location: str = ""      # e.g., "Göteborg-Hisingen"
+    location: str = ""      # e.g., "Göteborg-Hisingen" (legacy, first location)
     vehicle_type: str = ""  # "Automatbil" or "Manuell"
+    
+    # Multiple search locations (searched separately, results combined)
+    search_locations: List[str] = field(default_factory=list)
     
     # Locations to monitor (for filtering)
     locations: List[str] = field(default_factory=list)
@@ -67,8 +70,26 @@ class Config:
         self.location = os.getenv("LOCATION", "Göteborg-Hisingen")
         self.vehicle_type = os.getenv("VEHICLE_TYPE", "Automatbil")
         
-        locations_str = os.getenv("LOCATIONS", self.location)
-        self.locations = [loc.strip() for loc in locations_str.split(",") if loc.strip()]
+        # Parse multiple search locations (comma-separated)
+        # LOCATIONS takes precedence, fall back to LOCATION for backwards compatibility
+        locations_str = os.getenv("LOCATIONS", "")
+        if locations_str.strip():
+            self.search_locations = [loc.strip() for loc in locations_str.split(",") if loc.strip()]
+        else:
+            # Fallback to single location
+            self.search_locations = [self.location] if self.location else []
+        
+        # Set location to first search location for backwards compatibility
+        if self.search_locations and not self.location:
+            self.location = self.search_locations[0]
+        
+        # Filter locations (can be different from search locations)
+        filter_locations_str = os.getenv("FILTER_LOCATIONS", "")
+        if filter_locations_str.strip():
+            self.locations = [loc.strip() for loc in filter_locations_str.split(",") if loc.strip()]
+        else:
+            # Default to search locations
+            self.locations = self.search_locations.copy()
         
         self.check_before_date = os.getenv("CHECK_BEFORE_DATE", "")
         self.notify_before_date = os.getenv("NOTIFY_BEFORE_DATE", "")

@@ -201,7 +201,12 @@ async def main():
     logger.info(f"📝 Configuration:")
     logger.info(f"   License Type: {config.license_type}-Personbil")
     logger.info(f"   Exam Type: {config.exam_type}")
-    logger.info(f"   Location: {config.location}")
+    if len(config.search_locations) > 1:
+        logger.info(f"   Locations ({len(config.search_locations)}):")
+        for loc in config.search_locations:
+            logger.info(f"      - {loc}")
+    else:
+        logger.info(f"   Location: {config.location}")
     logger.info(f"   Vehicle: {config.vehicle_type}")
     
     if config.check_before_date:
@@ -435,7 +440,12 @@ if __name__ == "__main__":
             print("=" * 60)
             print()
             logger.info(f"📝 Configuration:")
-            logger.info(f"   Location: {config.location}")
+            if len(config.search_locations) > 1:
+                logger.info(f"   Locations ({len(config.search_locations)}):")
+                for loc in config.search_locations:
+                    logger.info(f"      - {loc}")
+            else:
+                logger.info(f"   Location: {config.location}")
             logger.info(f"   Exam Type: {config.exam_type}")
             logger.info(f"   Notification Email: {config.notification_email}")
             before_date = args.before_date if args.before_date else config.notify_before_date
