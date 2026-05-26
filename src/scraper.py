@@ -154,17 +154,27 @@ class TrafikverketScraper:
                 if not search_locations:
                     search_locations = [self.config.location] if self.config.location else []
                 
-                logger.info(f"📍 Will search {len(search_locations)} location(s): {', '.join(search_locations)}")
+                logger.info(f"")
+                logger.info(f"{'='*60}")
+                logger.info(f"📍 MULTI-LOCATION SEARCH")
+                logger.info(f"{'='*60}")
+                logger.info(f"   Total locations to search: {len(search_locations)}")
+                for i, loc in enumerate(search_locations, 1):
+                    logger.info(f"   {i}. {loc}")
+                logger.info(f"{'='*60}")
                 
                 # Search each location
                 for idx, location in enumerate(search_locations):
-                    logger.info(f"\n{'='*50}")
-                    logger.info(f"🔍 Searching location {idx+1}/{len(search_locations)}: {location}")
-                    logger.info(f"{'='*50}")
+                    logger.info(f"")
+                    logger.info(f"{'='*60}")
+                    logger.info(f"🔍 SEARCHING LOCATION {idx+1} of {len(search_locations)}")
+                    logger.info(f"   📍 Location: {location}")
+                    logger.info(f"{'='*60}")
                     
                     # Navigate to search page for each location (to reset form)
                     if idx > 0:
                         # For subsequent locations, navigate back to search to reset
+                        logger.info(f"   🔄 Navigating back to search page to reset form...")
                         await page.goto(self.BASE_URL + "#/search", wait_until='networkidle', timeout=30000)
                         await asyncio.sleep(2)
                         await self._close_overlays(page)
@@ -181,11 +191,13 @@ class TrafikverketScraper:
                     # Search and get slots for this location
                     location_slots = await self._scrape_slots(page)
                     
-                    logger.info(f"📋 Found {len(location_slots)} slots at {location}")
+                    logger.info(f"")
+                    logger.info(f"   ✅ RESULTS for {location}: {len(location_slots)} slots found")
                     all_slots.extend(location_slots)
                     
                     # Short delay between locations
                     if idx < len(search_locations) - 1:
+                        logger.info(f"   ⏳ Waiting before searching next location...")
                         await asyncio.sleep(2)
                 
                 # Save session again after successful scraping
@@ -193,7 +205,13 @@ class TrafikverketScraper:
                 
                 # Remove duplicates (in case same slot appears in multiple searches)
                 all_slots = list({slot.slot_id: slot for slot in all_slots}.values())
-                logger.info(f"\n📊 Total unique slots found across all locations: {len(all_slots)}")
+                
+                logger.info(f"")
+                logger.info(f"{'='*60}")
+                logger.info(f"📊 SEARCH COMPLETE - SUMMARY")
+                logger.info(f"{'='*60}")
+                logger.info(f"   Total unique slots across all locations: {len(all_slots)}")
+                logger.info(f"{'='*60}")
                 
             except Exception as e:
                 logger.error(f"❌ Error: {e}")
