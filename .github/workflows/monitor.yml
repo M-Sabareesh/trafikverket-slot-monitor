@@ -66,8 +66,8 @@ jobs:
           BOOKING_URL: ${{ secrets.BOOKING_URL }}
           LOCATION: ${{ secrets.LOCATION }}
           LOCATIONS: ${{ secrets.LOCATIONS }}
-          CHECK_BEFORE_DATE: "2026-06-13"
-          NOTIFY_BEFORE_DATE: "2026-06-13"
+          CHECK_BEFORE_DATE: "2026-06-20"
+          NOTIFY_BEFORE_DATE: "2026-06-20"
           NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -79,7 +79,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python src/main.py --debug --always-notify --before-date 2026-06-13 || true
+          python src/main.py --debug --always-notify --before-date 2026-06-20 || true
       
       - name: Upload debug artifacts
         if: always()
