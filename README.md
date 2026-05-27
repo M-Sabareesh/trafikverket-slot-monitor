@@ -1,16 +1,26 @@
-# 🚗 Trafikverket Driving Test Slot Monitor
+# 🚗 Trafikverket & Volvo Monitors
 
-Automatically monitors [Trafikverket's booking portal](https://fp.trafikverket.se/Boka/) for available driving test slots (uppkörning) and sends notifications when new slots become available.
+This repository contains two automated monitors:
+
+1. **Trafikverket Slot Monitor** - Monitors [Trafikverket's booking portal](https://fp.trafikverket.se/Boka/) for available driving test slots
+2. **Volvo Lease Monitor** - Monitors [Volvo's employee portal](https://www.volvobil.se/sv/) for lease car availability
 
 ## ✨ Features
 
+### Trafikverket Monitor
 - 🔍 Monitors **multiple locations** simultaneously for available slots
 - 📅 Filter by date (only show slots before a certain date)
 - 📧 Email notifications (Gmail, Outlook, etc.)
 - 📱 Telegram notifications
 - 💬 Discord notifications
-- ⏰ Runs automatically via GitHub Actions (every 2 hours)
+- ⏰ Runs automatically via GitHub Actions
 - 💾 Remembers previously found slots (no duplicate alerts)
+
+### Volvo Lease Monitor
+- 🚗 Monitors Volvo employee portal for lease car options
+- 📧 Sends email notification when "Lease Car" option becomes available
+- 🏢 Supports VCC Volvo Passenger Cars AB - Gothenburg
+- ⏰ Runs on the same schedule as Trafikverket monitor
 
 ## 🚀 Quick Start
 
@@ -168,9 +178,57 @@ Use a service like [cron-job.org](https://cron-job.org) to trigger the workflow 
    ```
 3. Schedule it to run every 5 minutes
 
-#### Option 3: Use a VPS or Raspberry Pi
-Run the monitor on a cheap VPS or Raspberry Pi with a local crontab for guaranteed timing.
+---
 
-## 📄 License
+## 🚗 Volvo Lease Monitor
 
-This project is licensed under the MIT License.
+### Setup
+
+1. **First-time login** (requires browser):
+   ```bash
+   python src/volvo_monitor.py --login
+   ```
+   This will open a browser where you can log in to the Volvo portal.
+
+2. **Save session to GitHub** (for automated runs):
+   ```bash
+   # Encode and save the session
+   base64 -w 0 data/volvo/volvo_session.json | gh secret set VOLVO_SESSION_DATA
+   ```
+
+3. **Run manually**:
+   ```bash
+   python src/volvo_monitor.py --debug
+   ```
+
+### How it works
+
+The monitor:
+1. Goes to https://www.volvobil.se/sv/
+2. Logs in using saved session
+3. Navigates to Order section
+4. Selects "VCC Volvo Passenger Cars AB - Gothenburg"
+5. Selects brand "Volvo"
+6. Selects "New assignment"
+7. Checks if "Lease Car" option is available
+8. Sends email notification if lease option is found
+
+### Command Line Options
+
+```bash
+python src/volvo_monitor.py                # Normal run (headless)
+python src/volvo_monitor.py --login        # Interactive login
+python src/volvo_monitor.py --dry-run      # Don't send notifications  
+python src/volvo_monitor.py --debug        # Save screenshots for debugging
+```
+
+### Running Both Monitors
+
+To trigger both monitors with one cron job, use the `trigger-all-monitors` event:
+```bash
+curl -X POST \
+  -H "Authorization: token YOUR_GH_PAT" \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/repos/YOUR_USER/trafikverket-slot-monitor/dispatches \
+  -d '{"event_type":"trigger-all-monitors"}'
+```

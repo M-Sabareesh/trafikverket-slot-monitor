@@ -54722,3 +54722,333 @@ WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current t
 WARNING:scraper:⚠️ Session cookies appear to be expired!
 ERROR:scraper:❌ Session expired! Login required.
 ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #30 - 2026-05-27 09:16:05
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:16)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #31 - 2026-05-27 09:19:25
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:19)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #32 - 2026-05-27 09:22:44
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:22)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #33 - 2026-05-27 09:26:04
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:26)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #34 - 2026-05-27 09:29:24
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:29)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #35 - 2026-05-27 09:32:43
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:32)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #36 - 2026-05-27 09:36:03
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:54)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #37 - 2026-05-27 09:58:12
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 09:58)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #38 - 2026-05-27 10:06:47
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:06)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #39 - 2026-05-27 10:10:06
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:10)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #40 - 2026-05-27 10:13:26
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:13)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #41 - 2026-05-27 10:29:43
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:29)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #42 - 2026-05-27 10:33:03
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:33)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #43 - 2026-05-27 10:36:22
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:36)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #44 - 2026-05-27 10:39:42
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:39)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #45 - 2026-05-27 10:43:02
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:43)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #46 - 2026-05-27 10:46:22
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:46)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #47 - 2026-05-27 10:49:41
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:49)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #48 - 2026-05-27 10:53:01
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:53)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #49 - 2026-05-27 10:56:21
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:56)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #50 - 2026-05-27 10:59:41
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 10:59)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #51 - 2026-05-27 11:02:55
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:02)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #52 - 2026-05-27 11:06:15
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:06)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #53 - 2026-05-27 11:09:35
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:09)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #54 - 2026-05-27 11:12:54
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:12)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #55 - 2026-05-27 11:16:15
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:16)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #56 - 2026-05-27 11:19:35
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:19)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #57 - 2026-05-27 11:22:55
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:22)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #58 - 2026-05-27 11:26:14
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 11:26)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!
+ERROR:notifier:❌ Session expired email failed: [Errno 101] Network is unreachable
+ERROR:__main__:❌ Failed to send session expiry notification
+INFO:__main__:💤 Sleeping for 60 seconds before retry...
+INFO:__main__:🔍 Run #59 - 2026-05-27 12:41:20
+INFO:scraper:🌐 Launching browser (headless=True)...
+INFO:scraper:📂 Loading saved session...
+INFO:scraper:✅ Found ASP.NET_SessionId cookie
+WARNING:scraper:⚠️ LoginValid session expired at 2026-05-26 17:54 (current time: 2026-05-27 12:41)
+WARNING:scraper:⚠️ Session cookies appear to be expired!
+ERROR:scraper:❌ Session expired! Login required.
+ERROR:__main__:⚠️ Session has expired!

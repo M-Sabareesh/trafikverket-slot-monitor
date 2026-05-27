@@ -1,0 +1,36 @@
+name: Run All Monitors
+
+on:
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # External trigger via repository_dispatch (from cron-job.org)
+  repository_dispatch:
+    types: [trigger-all-monitors]
+
+# Prevent concurrent runs
+concurrency:
+  group: all-monitors
+  cancel-in-progress: true
+
+jobs:
+  trigger-monitors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Trafikverket Monitor
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: trigger-monitor
+      
+      - name: Trigger Volvo Monitor
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: trigger-volvo-monitor
+      
+      - name: Summary
+        run: |
+          echo "✅ Triggered both monitors:"
+          echo "   - Trafikverket Slot Monitor"
+          echo "   - Volvo Lease Monitor"

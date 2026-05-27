@@ -1,0 +1,69 @@
+name: Monitor Volvo Lease Options
+
+on:
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Allow external trigger via repository_dispatch
+  repository_dispatch:
+    types: [trigger-volvo-monitor]
+
+# Prevent concurrent runs
+concurrency:
+  group: volvo-monitor
+  cancel-in-progress: true
+
+jobs:
+  check-lease:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: Restore Volvo session from secret
+        env:
+          VOLVO_SESSION_DATA: ${{ secrets.VOLVO_SESSION_DATA }}
+        run: |
+          mkdir -p data/volvo
+          if [ -n "$VOLVO_SESSION_DATA" ]; then
+            echo "$VOLVO_SESSION_DATA" | base64 -d > data/volvo/volvo_session.json
+            echo "✅ Volvo session restored from GitHub Secret"
+          else
+            echo "⚠️ No VOLVO_SESSION_DATA secret found - login may be required"
+          fi
+      
+      - name: Run Volvo lease monitor
+        env:
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python src/volvo_monitor.py --debug || true
+      
+      - name: Upload debug artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: volvo-debug-screenshots
+          path: |
+            data/volvo/*.png
+            data/volvo/*.json
+            data/volvo/*.html
+          retention-days: 7

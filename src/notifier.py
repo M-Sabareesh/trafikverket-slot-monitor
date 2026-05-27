@@ -324,6 +324,30 @@ Trafikverket Slot Monitor
         except Exception as e:
             logger.error(f"❌ Email failed: {e}")
             return False
+
+    def send_email(self, subject: str, body: str, html_body: str = None) -> bool:
+        """Send a generic email notification with custom subject and body."""
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["From"] = self.config.smtp_username
+            msg["To"] = self.config.notification_email
+            msg["Subject"] = subject
+
+            msg.attach(MIMEText(body, "plain", "utf-8"))
+            if html_body:
+                msg.attach(MIMEText(html_body, "html", "utf-8"))
+            
+            with smtplib.SMTP(self.config.smtp_server, self.config.smtp_port) as server:
+                server.starttls()
+                server.login(self.config.smtp_username, self.config.smtp_password)
+                server.send_message(msg)
+            
+            logger.info(f"✅ Email sent to {self.config.notification_email}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Email failed: {e}")
+            return False
     
     def _send_telegram(self, message: str) -> bool:
         """Send Telegram notification."""
