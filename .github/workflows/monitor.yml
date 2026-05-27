@@ -79,6 +79,16 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "=== DEBUG: Checking LOCATIONS env var ==="
+          if [ -z "$LOCATIONS" ]; then
+            echo "❌ LOCATIONS secret is NOT SET or EMPTY!"
+            echo "   Please add LOCATIONS secret in GitHub repository settings"
+            echo "   Value should be: Göteborg-Hisingen,Göteborg Öst"
+          else
+            echo "✅ LOCATIONS is set (value masked for security)"
+            echo "   Number of locations: $(echo "$LOCATIONS" | tr ',' '\n' | wc -l)"
+          fi
+          echo "========================================="
           python src/main.py --debug --always-notify --before-date 2026-06-20 || true
       
       - name: Upload debug artifacts
